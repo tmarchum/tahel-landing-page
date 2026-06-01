@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>תהל · סדנאות איפור לנערות</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Secular+One&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FFF1EA;
+    --cream-2: #FCE3D8;
+    --pink: #FF3D77;
+    --pink-deep: #E62862;
+    --pink-soft: #FFC7D9;
+    --butter: #FFC73C;
+    --lilac: #C9A7F5;
+    --wine: #21060F;
+    --wine-2: #380A1A;
+    --ink: #1A0810;
+    --ink-soft: #7A5560;
+    --paper: #FFFFFF;
+    --line: rgba(33,6,15,0.10);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Rubik', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    overflow-x: clip;
+    font-weight: 400;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .display { font-family: 'Secular One', sans-serif; font-weight: 400; letter-spacing: -0.01em; line-height: 0.98; }
+  .kicker { font-weight: 800; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; }
+  img { display: block; max-width: 100%; }
+
+  /* Marquee */
+  .top-bar {
+    background: var(--ink);
+    color: var(--butter);
+    padding: 13px 0;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .marquee-track {
+    display: flex;
+    animation: marquee 32s linear infinite;
+    white-space: nowrap;
+    width: max-content;
+  }
+  .marquee-track span {
+    font-family: 'Secular One', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+    padding: 0 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .marquee-track span::after { content: "✦"; color: var(--pink); }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(50%); }
+  }
+
+  /* Nav */
+  nav.main {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--cream);
+  }
+  .logo { display: flex; align-items: center; gap: 12px; }
+  .logo-mark {
+    width: 42px; height: 42px;
+    border-radius: 14px;
+    background: var(--pink);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--cream);
+    font-family: 'Secular One', sans-serif;
+    font-size: 1.5rem;
+    transform: rotate(-6deg);
+    box-shadow: 0 6px 0 var(--pink-deep);
+  }
+  .logo-text { font-family: 'Secular One', sans-serif; font-size: 1.7rem; line-height: 0.9; }
+  .logo-text small {
+    display: block;
+    font-family: 'Rubik', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: var(--pink);
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+  .nav-links { display: flex; gap: 30px; align-items: center; font-size: 0.98rem; font-weight: 600; }
+  .nav-links a { color: var(--ink); text-decoration: none; }
+  .nav-links a:not(.nav-cta):hover { color: var(--pink); }
+  .nav-links a.nav-cta {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 12px 22px;
+    border-radius: 999px;
+    font-weight: 700;
+    transition: transform 0.2s, background 0.2s;
+  }
+  .nav-links a.nav-cta:hover { background: var(--pink); transform: translateY(-2px) rotate(-1deg); }
+
+  /* HERO */
+  .hero {
+    padding: 48px 40px 90px;
+    position: relative;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--butter);
+    padding: 9px 16px;
+    border-radius: 999px;
+    width: fit-content;
+    margin-bottom: 26px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    transform: rotate(-1.5deg);
+    box-shadow: 0 4px 0 rgba(33,6,15,0.12);
+  }
+  .hero-eyebrow .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--pink); animation: pulse 1.8s ease infinite; }
+  @keyframes pulse { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.5);opacity:.5} }
+
+  h1.hero-title {
+    font-family: 'Secular One', sans-serif;
+    font-size: clamp(3.6rem, 8.5vw, 8.2rem);
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    margin-bottom: 26px;
+  }
+  h1.hero-title .hl {
+    color: var(--pink);
+    position: relative;
+    display: inline-block;
+  }
+  h1.hero-title .hl::after {
+    content: "";
+    position: absolute;
+    left: -2%; right: -2%; bottom: 6%;
+    height: 26%;
+    background: var(--butter);
+    z-index: -1;
+    transform: rotate(-1deg) scaleX(0);
+    transform-origin: right;
+    animation: highlight 0.7s 0.7s cubic-bezier(0.22,1,0.36,1) forwards;
+  }
+  @keyframes highlight { to { transform: rotate(-1deg) scaleX(1); } }
+  h1.hero-title .word { display: inline-block; overflow: hidden; vertical-align: bottom; }
+  h1.hero-title .word > span {
+    display: inline-block;
+    transform: translateY(0);
+    animation: wordIn 0.9s cubic-bezier(0.22,1,0.36,1) backwards;
+  }
+  h1.hero-title .word:nth-child(1) > span { animation-delay: 0.08s; }
+  h1.hero-title .word:nth-child(2) > span { animation-delay: 0.18s; }
+  h1.hero-title .word:nth-child(4) > span { animation-delay: 0.28s; }
+  @keyframes wordIn { from { transform: translateY(110%); } to { transform: translateY(0); } }
+
+  .hero-sub { font-size: 1.18rem; line-height: 1.6; color: var(--ink-soft); max-width: 40ch; margin-bottom: 32px; font-weight: 500; }
+  .hero-cta-row { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--pink);
+    color: var(--cream);
+    padding: 17px 30px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+    display: inline-flex; align-items: center; gap: 12px;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    border: 0; cursor: pointer; font-family: inherit;
+    box-shadow: 0 8px 0 var(--pink-deep);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 0 var(--pink-deep); }
+  .btn-primary:active { transform: translateY(4px); box-shadow: 0 4px 0 var(--pink-deep); }
+  .btn-ghost {
+    background: transparent;
+    color: var(--ink);
+    padding: 17px 28px;
+    border: 2px solid var(--ink);
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+    display: inline-flex; align-items: center; gap: 10px;
+    transition: background 0.2s, color 0.2s;
+  }
+  .btn-ghost:hover { background: var(--ink); color: var(--cream); }
+
+  .hero-stats { display: flex; gap: 36px; margin-top: 52px; padding-top: 28px; border-top: 2px dashed var(--line); }
+  .hero-stats .num { font-family: 'Secular One', sans-serif; font-size: 2.6rem; line-height: 1; color: var(--pink); }
+  .hero-stats .label { font-size: 0.85rem; color: var(--ink-soft); margin-top: 6px; font-weight: 600; }
+
+  /* Hero visual */
+  .hero-visual { position: relative; aspect-ratio: 4/5; }
+  .hv-main {
+    position: absolute; inset: 0;
+    border-radius: 40px 40px 40px 120px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px -18px rgba(33,6,15,0.35);
+    border: 6px solid var(--paper);
+  }
+  .hv-main img { width: 100%; height: 100%; object-fit: cover; }
+  .hv-chip {
+    position: absolute;
+    width: 30%; aspect-ratio: 1;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 5px solid var(--paper);
+    box-shadow: 0 16px 30px -10px rgba(33,6,15,0.3);
+    bottom: -5%; left: -6%;
+    transform: rotate(-8deg);
+    animation: floatB 6s ease-in-out infinite;
+  }
+  .hv-chip img { width:100%; height:100%; object-fit: cover; }
+  @keyframes floatB { 0%,100%{transform:rotate(-8deg) translateY(0)} 50%{transform:rotate(-8deg) translateY(-12px)} }
+  .hv-badge {
+    position: absolute;
+    top: -4%; left: -6%;
+    background: var(--butter);
+    color: var(--ink);
+    width: 116px; height: 116px;
+    border-radius: 50%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center;
+    z-index: 5;
+    border: 4px solid var(--paper);
+    box-shadow: 0 12px 24px -8px rgba(33,6,15,0.35);
+    transform: rotate(-12deg);
+  }
+  .hv-badge .price { font-family: 'Secular One', sans-serif; font-size: 1.9rem; line-height: 1; }
+  .hv-badge .lbl { font-size: 0.62rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px; }
+  .hv-star {
+    position: absolute; top: 38%; right: -7%;
+    background: var(--pink); color: var(--cream);
+    padding: 12px 18px; border-radius: 16px;
+    font-family: 'Secular One', sans-serif; font-size: 1.1rem;
+    transform: rotate(6deg); z-index: 5;
+    box-shadow: 0 10px 20px -6px rgba(33,6,15,0.35);
+    animation: floatA 5s ease-in-out infinite;
+  }
+  @keyframes floatA { 0%,100%{transform:rotate(6deg) translateY(0)} 50%{transform:rotate(6deg) translateY(-10px)} }
+
+  /* Press row */
+  .press-row {
+    background: var(--pink);
+    color: var(--cream);
+    padding: 0;
+    overflow: hidden;
+  }
+  .press-track {
+    display: flex;
+    animation: marquee 28s linear infinite;
+    white-space: nowrap;
+    width: max-content;
+    padding: 22px 0;
+  }
+  .press-track span {
+    font-family: 'Secular One', sans-serif;
+    font-size: 1.7rem;
+    padding: 0 28px;
+    display: inline-flex; align-items: center; gap: 28px;
+  }
+  .press-track span::after { content: "♥"; color: var(--butter); font-size: 1.3rem; }
+
+  /* Section base */
+  section { padding: 110px 40px; position: relative; }
+  .section-header {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    gap: 24px; margin-bottom: 64px; flex-wrap: wrap;
+  }
+  .section-head-left { display: flex; align-items: center; gap: 18px; }
+  .section-num {
+    font-family: 'Secular One', sans-serif;
+    font-size: 1.4rem;
+    background: var(--ink); color: var(--cream);
+    width: 54px; height: 54px; border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    transform: rotate(-5deg);
+    flex-shrink: 0;
+  }
+  .section-title {
+    font-family: 'Secular One', sans-serif;
+    font-size: clamp(2.5rem, 5.5vw, 4.6rem);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+  }
+  .section-title .hl { color: var(--pink); }
+  .section-meta { font-weight: 700; color: var(--ink-soft); font-size: 0.95rem; }
+
+  /* About */
+  .about-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 70px; align-items: center; }
+  .about-img {
+    aspect-ratio: 4/5; border-radius: 40px 120px 40px 40px;
+    overflow: hidden; position: relative;
+    border: 6px solid var(--paper);
+    box-shadow: 0 30px 60px -18px rgba(33,6,15,0.3);
+  }
+  .about-img img { width:100%; height:100%; object-fit: cover; }
+  .about-img .tag {
+    position: absolute; bottom: 20px; right: 20px;
+    background: var(--butter); padding: 10px 18px; border-radius: 999px;
+    font-weight: 800; font-size: 0.85rem; transform: rotate(-3deg);
+  }
+  .about-text .quote {
+    font-family: 'Secular One', sans-serif;
+    font-size: clamp(1.9rem, 3.4vw, 3rem);
+    line-height: 1.12; color: var(--ink); margin-bottom: 26px;
+    letter-spacing: -0.01em;
+  }
+  .about-text .quote .hl { color: var(--pink); }
+  .about-text p { font-size: 1.08rem; line-height: 1.75; color: var(--ink-soft); max-width: 50ch; margin-bottom: 16px; font-weight: 500; }
+  .about-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 38px; }
+  .about-stats .stat {
+    background: var(--paper); border-radius: 22px; padding: 22px 20px;
+    border-bottom: 5px solid var(--pink-soft);
+  }
+  .stat .num { font-family: 'Secular One', sans-serif; font-size: 2.6rem; line-height: 1; color: var(--pink); }
+  .stat .label { font-size: 0.82rem; color: var(--ink-soft); margin-top: 6px; font-weight: 600; }
+
+  /* Course */
+  .course { background: var(--wine); color: var(--cream); }
+  .course .section-num { background: var(--butter); color: var(--ink); }
+  .course .section-title .hl { color: var(--butter); }
+  .course .section-meta { color: var(--pink-soft); }
+  .course-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 70px; align-items: center; }
+  .course-headline {
+    font-family: 'Secular One', sans-serif;
+    font-size: clamp(2.4rem, 5vw, 4rem); line-height: 1.02;
+    letter-spacing: -0.02em; margin-bottom: 28px;
+  }
+  .course-headline .hl { color: var(--butter); }
+  .course-lead { font-size: 1.12rem; line-height: 1.7; color: rgba(255,241,234,0.78); max-width: 46ch; margin-bottom: 34px; font-weight: 500; }
+  .course-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .fact {
+    background: var(--wine-2); padding: 28px 24px; border-radius: 24px;
+    transition: transform 0.3s, background 0.3s;
+    border: 2px solid rgba(255,199,60,0.15);
+  }
+  .fact:hover { transform: translateY(-6px) rotate(-1deg); background: var(--pink); }
+  .fact .label { font-weight: 800; font-size: 0.7rem; letter-spacing: 0.12em; color: var(--butter); text-transform: uppercase; margin-bottom: 12px; }
+  .fact:hover .label { color: var(--cream); }
+  .fact .value { font-family: 'Secular One', sans-serif; font-size: 2.6rem; line-height: 1; }
+  .fact .value small { display: block; font-family: 'Rubik', sans-serif; font-weight: 600; font-size: 0.9rem; color: rgba(255,241,234,0.7); margin-top: 8px; }
+  .fact:hover .value small { color: rgba(255,255,255,0.9); }
+
+  /* Curriculum */
+  .curriculum { background: var(--cream-2); }
+  .lessons { display: grid; gap: 16px; }
+  .lesson {
+    display: grid; grid-template-columns: 84px 1fr 2fr 56px;
+    gap: 28px; align-items: center;
+    background: var(--paper); border-radius: 28px;
+    padding: 30px 34px;
+    transition: transform 0.3s, background 0.3s;
+    cursor: pointer; position: relative; overflow: hidden;
+  }
+  .lesson:hover { transform: translateX(-10px); background: var(--ink); color: var(--cream); }
+  .lesson .num { font-family: 'Secular One', sans-serif; font-size: 2.6rem; color: var(--pink); }
+  .lesson:hover .num { color: var(--butter); }
+  .lesson .title { font-family: 'Secular One', sans-serif; font-size: 1.7rem; line-height: 1.05; }
+  .lesson .title .hl { color: var(--pink); }
+  .lesson:hover .title .hl { color: var(--butter); }
+  .lesson .desc { font-size: 1rem; line-height: 1.6; color: var(--ink-soft); max-width: 56ch; }
+  .lesson:hover .desc { color: rgba(255,241,234,0.85); }
+  .lesson .arrow {
+    width: 50px; height: 50px; border-radius: 50%;
+    background: var(--cream); color: var(--ink);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem; transition: all 0.3s; font-weight: 700;
+  }
+  .lesson:hover .arrow { background: var(--butter); transform: translateX(-6px) scale(1.1); }
+
+  /* Includes */
+  .includes-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 50px; align-items: center; }
+  .gift-box {
+    position: relative; background: var(--pink); color: var(--cream);
+    border-radius: 40px; padding: 56px 50px; overflow: hidden;
+    box-shadow: 0 24px 50px -16px rgba(255,61,119,0.45);
+  }
+  .gift-box::after {
+    content: "♥"; position: absolute; bottom: -30px; left: -10px;
+    font-size: 16rem; color: rgba(255,255,255,0.08); line-height: 1;
+  }
+  .gift-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--butter); color: var(--ink);
+    padding: 9px 18px; border-radius: 999px;
+    font-weight: 800; font-size: 0.8rem; letter-spacing: 0.04em;
+    margin-bottom: 22px; transform: rotate(-2deg); position: relative; z-index: 2;
+  }
+  .gift-box h3 {
+    font-family: 'Secular One', sans-serif;
+    font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.05;
+    margin-bottom: 16px; position: relative; z-index: 2;
+  }
+  .gift-box h3 .hl { color: var(--butter); }
+  .gift-box p { font-size: 1.08rem; line-height: 1.6; max-width: 36ch; margin-bottom: 30px; position: relative; z-index: 2; color: rgba(255,255,255,0.92); font-weight: 500; }
+  .gift-items { display: flex; gap: 12px; flex-wrap: wrap; position: relative; z-index: 2; }
+  .gift-item { background: rgba(255,255,255,0.18); backdrop-filter: blur(8px); padding: 13px 22px; border-radius: 999px; font-weight: 700; font-size: 0.95rem; }
+  .gift-image {
+    aspect-ratio: 4/5; border-radius: 120px 40px 40px 40px; overflow: hidden;
+    border: 6px solid var(--paper);
+    box-shadow: 0 24px 50px -16px rgba(33,6,15,0.3);
+  }
+  .gift-image img { width:100%; height:100%; object-fit: cover; }
+
+  /* Gallery */
+  .gallery-grid { display: grid; grid-template-columns: repeat(12,1fr); gap: 14px; grid-auto-rows: 140px; }
+  .gallery-item { border-radius: 24px; overflow: hidden; position: relative; transition: transform 0.4s; border: 4px solid var(--paper); box-shadow: 0 12px 30px -12px rgba(33,6,15,0.25); }
+  .gallery-item:hover { transform: scale(1.03) rotate(-1deg); }
+  .gallery-item img { width:100%; height:100%; object-fit: cover; transition: transform 0.6s; }
+  .gallery-item:hover img { transform: scale(1.08); }
+  .gallery-item:nth-child(1) { grid-column: span 5; grid-row: span 3; }
+  .gallery-item:nth-child(2) { grid-column: span 4; grid-row: span 2; }
+  .gallery-item:nth-child(3) { grid-column: span 3; grid-row: span 2; }
+  .gallery-item:nth-child(4) { grid-column: span 3; grid-row: span 2; }
+  .gallery-item:nth-child(5) { grid-column: span 4; grid-row: span 2; }
+  .gallery-item:nth-child(6) { grid-column: span 5; grid-row: span 2; }
+  .gallery-caption {
+    position: absolute; bottom: 14px; right: 14px;
+    background: var(--butter); padding: 6px 14px; border-radius: 999px;
+    font-weight: 800; font-size: 0.68rem; letter-spacing: 0.04em;
+  }
+
+  /* Before/After */
+  .ba-wrap { margin-top: 80px; }
+  .ba-title { text-align: center; margin-bottom: 30px; }
+  .ba-title h3 { font-family: 'Secular One', sans-serif; font-size: clamp(2rem,4vw,3rem); line-height: 1.05; }
+  .ba-title h3 .hl { color: var(--pink); }
+  .ba-title p { color: var(--ink-soft); margin-top: 8px; font-size: 1rem; font-weight: 600; }
+  .ba-slider {
+    width: 100%; max-width: 1080px; margin: 0 auto;
+    aspect-ratio: 16/10; position: relative; overflow: hidden;
+    cursor: ew-resize; user-select: none; border-radius: 32px;
+    border: 6px solid var(--paper); box-shadow: 0 30px 60px -18px rgba(33,6,15,0.3);
+  }
+  .ba-side { position: absolute; inset: 0; }
+  .ba-side img { width:100%; height:100%; object-fit: cover; }
+  .ba-side.after { clip-path: inset(0 0 0 50%); }
+  .ba-side .label {
+    position: absolute; top: 22px;
+    padding: 9px 18px; border-radius: 999px;
+    font-weight: 800; font-size: 0.78rem; letter-spacing: 0.08em;
+  }
+  .ba-side.before .label { right: 22px; background: var(--paper); color: var(--ink); }
+  .ba-side.after .label { left: 22px; background: var(--pink); color: var(--cream); }
+  .ba-handle { position: absolute; top:0; bottom:0; left:50%; width:3px; background: var(--paper); transform: translateX(-50%); pointer-events: none; }
+  .ba-handle::after {
+    content: "↔"; position: absolute; top:50%; left:50%;
+    transform: translate(-50%,-50%);
+    width: 58px; height: 58px; background: var(--butter); color: var(--ink);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem; font-weight: 700; box-shadow: 0 8px 24px rgba(33,6,15,0.35);
+  }
+
+  /* Testimonials */
+  .testimonials { background: var(--lilac); }
+  .testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+  .testi {
+    background: var(--paper); padding: 34px 30px; border-radius: 28px;
+    transition: transform 0.3s; position: relative;
+  }
+  .testi:nth-child(2) { transform: rotate(-1.5deg); }
+  .testi:hover { transform: translateY(-8px) rotate(1deg); }
+  .testi .stars { color: var(--butter); font-size: 1.1rem; margin-bottom: 18px; letter-spacing: 2px; -webkit-text-stroke: 0.5px var(--pink-deep); }
+  .testi blockquote { font-family: 'Secular One', sans-serif; font-size: 1.5rem; line-height: 1.25; margin-bottom: 26px; letter-spacing: -0.01em; }
+  .testi blockquote .hl { color: var(--pink); }
+  .testi .author { display: flex; align-items: center; gap: 12px; padding-top: 20px; border-top: 2px dashed var(--line); }
+  .testi .avatar { width: 46px; height: 46px; border-radius: 14px; background: var(--pink); display: flex; align-items: center; justify-content: center; font-family: 'Secular One', sans-serif; font-size: 1.2rem; color: var(--cream); transform: rotate(-5deg); }
+  .testi .name { font-weight: 800; }
+  .testi .role { font-size: 0.85rem; color: var(--ink-soft); font-weight: 500; }
+
+  /* FAQ */
+  .faq-list { max-width: 900px; margin: 0 auto; display: grid; gap: 14px; }
+  .faq-item { background: var(--paper); border-radius: 22px; padding: 26px 30px; cursor: pointer; transition: background 0.3s; }
+  .faq-item.open { background: var(--ink); color: var(--cream); }
+  .faq-q { display: flex; justify-content: space-between; align-items: center; font-family: 'Secular One', sans-serif; font-size: 1.4rem; line-height: 1.3; gap: 24px; }
+  .faq-q .plus {
+    width: 38px; height: 38px; border-radius: 12px;
+    background: var(--cream); color: var(--ink);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem; flex-shrink: 0; transition: transform 0.4s, background 0.3s, color 0.3s;
+  }
+  .faq-item.open .plus { transform: rotate(135deg); background: var(--butter); }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.5s ease, padding 0.4s ease; line-height: 1.7; font-size: 1rem; max-width: 70ch; color: rgba(255,241,234,0.8); font-weight: 500; }
+  .faq-item.open .faq-a { max-height: 240px; padding-top: 16px; }
+
+  /* Contact */
+  .contact { background: var(--wine); color: var(--cream); }
+  .contact .section-num { background: var(--butter); color: var(--ink); }
+  .contact .section-title .hl { color: var(--butter); }
+  .contact .section-meta { color: var(--pink-soft); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; }
+  .contact-info h3 { font-family: 'Secular One', sans-serif; font-size: clamp(2.2rem,4vw,3.4rem); line-height: 1.05; margin-bottom: 26px; }
+  .contact-info h3 .hl { color: var(--butter); }
+  .contact-info p { line-height: 1.7; color: rgba(255,241,234,0.72); margin-bottom: 36px; max-width: 40ch; font-weight: 500; }
+  .contact-row { display: flex; gap: 16px; align-items: center; padding: 20px 0; border-bottom: 2px dashed rgba(255,199,60,0.2); }
+  .contact-row .icon { width: 48px; height: 48px; border-radius: 14px; background: var(--pink); color: var(--cream); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.2rem; transform: rotate(-5deg); }
+  .contact-row .label { font-weight: 800; font-size: 0.68rem; letter-spacing: 0.12em; color: var(--butter); margin-bottom: 4px; text-transform: uppercase; }
+  .contact-row .value { font-family: 'Secular One', sans-serif; font-size: 1.4rem; }
+  .contact-row a { color: inherit; text-decoration: none; }
+
+  form.cta-form { background: var(--wine-2); padding: 38px; border-radius: 32px; display: flex; flex-direction: column; gap: 18px; border: 2px solid rgba(255,199,60,0.15); }
+  .field label { font-weight: 800; font-size: 0.68rem; letter-spacing: 0.12em; color: var(--butter); margin-bottom: 8px; display: block; text-transform: uppercase; }
+  .field input, .field textarea, .field select {
+    width: 100%; background: rgba(255,255,255,0.06); border: 2px solid rgba(255,199,60,0.18);
+    border-radius: 14px; padding: 14px 16px; color: var(--cream);
+    font-family: 'Rubik', sans-serif; font-size: 1rem; outline: none; transition: border-color 0.3s;
+  }
+  .field input::placeholder, .field textarea::placeholder { color: rgba(255,241,234,0.4); }
+  .field input:focus, .field textarea:focus, .field select:focus { border-color: var(--butter); }
+  .field textarea { resize: vertical; min-height: 64px; }
+  .field option { background: var(--wine); color: var(--cream); }
+  .submit-btn {
+    background: var(--butter); color: var(--ink); border: 0;
+    padding: 18px 30px; font-family: 'Secular One', sans-serif; font-size: 1.2rem;
+    cursor: pointer; border-radius: 999px; margin-top: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 8px 0 #D9A410;
+    display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+  }
+  .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 0 #D9A410; }
+  .submit-btn:active { transform: translateY(4px); box-shadow: 0 4px 0 #D9A410; }
+
+  /* Closing */
+  .closing { background: var(--pink); text-align: center; padding: 100px 40px 40px; overflow: hidden; }
+  .closing .small { font-weight: 800; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream); display: block; margin-bottom: 24px; }
+  .closing .text { font-family: 'Secular One', sans-serif; font-size: clamp(4rem,18vw,17rem); line-height: 0.82; color: var(--cream); letter-spacing: -0.03em; }
+  .closing .text b { color: var(--butter); font-weight: 400; }
+
+  /* Footer */
+  footer { background: var(--ink); color: var(--cream); padding: 80px 40px 40px; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 56px; padding-bottom: 56px; border-bottom: 2px dashed rgba(255,199,60,0.2); }
+  .footer-col h4 { font-weight: 800; font-size: 0.68rem; letter-spacing: 0.12em; color: var(--butter); margin-bottom: 16px; text-transform: uppercase; }
+  .footer-col a { display: block; padding: 6px 0; color: rgba(255,241,234,0.7); text-decoration: none; font-weight: 500; }
+  .footer-col a:hover { color: var(--butter); }
+  .footer-brand p { margin-top: 16px; color: rgba(255,241,234,0.6); max-width: 36ch; line-height: 1.6; font-weight: 500; }
+  .footer-bottom { display: flex; justify-content: space-between; font-weight: 700; font-size: 0.78rem; color: rgba(255,241,234,0.4); flex-wrap: wrap; gap: 12px; }
+
+  /* Reveal */
+  .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.9s cubic-bezier(0.22,1,0.36,1), transform 0.9s cubic-bezier(0.22,1,0.36,1); }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  /* Responsive */
+  @media (max-width: 980px) {
+    nav.main { padding: 16px 20px; flex-direction: column; gap: 14px; }
+    .nav-links { gap: 14px; flex-wrap: wrap; justify-content: center; font-size: 0.88rem; }
+    section { padding: 64px 20px; }
+    .hero { padding: 30px 20px 60px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 60px; }
+    .about-grid, .course-grid, .contact-grid, .includes-grid { grid-template-columns: 1fr; gap: 44px; }
+    .about-stats { gap: 10px; }
+    .lesson { grid-template-columns: 56px 1fr; gap: 14px; padding: 24px; }
+    .lesson .desc { grid-column: 1 / -1; }
+    .lesson .arrow { display: none; }
+    .lesson:hover { transform: none; }
+    .gallery-grid { grid-template-columns: repeat(2,1fr); grid-auto-rows: 170px; }
+    .gallery-item { grid-column: span 1 !important; grid-row: span 1 !important; }
+    .gallery-item:nth-child(1), .gallery-item:nth-child(6) { grid-column: span 2 !important; }
+    .testi-grid { grid-template-columns: 1fr; }
+    .testi:nth-child(2) { transform: none; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .gift-box { padding: 40px 30px; }
+    form.cta-form { padding: 26px; }
+  }
+</style>
+</head>
+<body>
+<!-- Top marquee -->
+<div class="top-bar">
+  <div class="marquee-track">
+    <span>קורס איפור לנערות 12-16</span>
+    <span>קבוצות אישיות עד 5 בנות</span>
+    <span>4 מפגשים · 349 ₪</span>
+    <span>ערכת איפור מתנה</span>
+    <span>פתח תקווה</span>
+    <span>הרשמה פתוחה</span>
+    <span>קורס איפור לנערות 12-16</span>
+    <span>קבוצות אישיות עד 5 בנות</span>
+    <span>4 מפגשים · 349 ₪</span>
+    <span>ערכת איפור מתנה</span>
+    <span>פתח תקווה</span>
+    <span>הרשמה פתוחה</span>
+  </div>
+</div>
+
+<!-- Nav -->
+<nav class="main">
+  <div class="logo">
+    <span class="logo-mark"><svg viewBox="0 0 48 44" width="26" height="24" fill="none" aria-hidden="true"><g stroke="#FFF1EA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 26q18-20 36 0"/><path d="M10 27q14 11 28 0"/><path d="M42 26q4-2 6-7"/><path d="M15 13l-3-7M24 10v-7M33 13l3-7"/></g><circle cx="24" cy="22" r="5.5" fill="#FFF1EA"/></svg></span>
+    <span class="logo-text">תהל<small>Makeup Studio</small></span>
+  </div>
+  <div class="nav-links">
+    <a href="#about">אודות</a>
+    <a href="#course">הקורס</a>
+    <a href="#curriculum">תוכנית</a>
+    <a href="#gallery">גלריה</a>
+    <a href="#faq">שאלות</a>
+    <a href="#contact" class="nav-cta">הרשמה לקורס →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-grid">
+    <div class="hero-left">
+      <div class="hero-eyebrow">
+        <span class="dot"></span>
+        <span>קבוצה חדשה נפתחת · מקומות אחרונים!</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="word"><span>איפור</span></span><br/>
+        <span class="word"><span>שמרגיש</span></span><br/>
+        <span class="hl">בדיוק</span>
+        <span class="word"><span>כמוך.</span></span>
+      </h1>
+      <p class="hero-sub">קורס איפור אינטימי לנערות 12-16. ארבעה מפגשים, חמש בנות בלבד, וערכת איפור אישית מתנה. ללמוד להתאפר טבעי ויפה — בלי להגזים.</p>
+      <div class="hero-cta-row">
+        <a href="#contact" class="btn-primary">הרשמה לקורס →</a>
+        <a href="#course" class="btn-ghost">מה לומדים? ↓</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="num">04</div><div class="label">מפגשים אישיים</div></div>
+        <div class="stat"><div class="num">05</div><div class="label">בנות בקבוצה</div></div>
+        <div class="stat"><div class="num">★5.0</div><div class="label">דירוג ממוצע</div></div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hv-main">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0ODAgNjAwIiBmaWxsPSJub25lIj48cmVjdCB3aWR0aD0iNDgwIiBoZWlnaHQ9IjYwMCIgZmlsbD0iI0ZGQzczQyI+PC9yZWN0PjxjaXJjbGUgY3g9IjI0MCIgY3k9IjI1MCIgcj0iMTg2IiBmaWxsPSIjRkZENDZCIj48L2NpcmNsZT48ZyBmaWxsPSIjRkZGNkU2Ij48cGF0aCBkPSJNMzk4IDEzMmM5LTEgMTQtNiAxNS0xNSAxIDkgNiAxNCAxNSAxNS05IDEtMTQgNi0xNSAxNS0xLTktNi0xNC0xNS0xNXoiPjwvcGF0aD48cGF0aCBkPSJNODQgMzk2YzgtMSAxMi01IDEzLTEzIDEgOCA1IDEyIDEzIDEzLTggMS0xMiA1LTEzIDEzLTEtOC01LTEyLTEzLTEzeiI+PC9wYXRoPjwvZz48cGF0aCBkPSJNMjU2IDE1MCBDMzAyIDEzNiAzMzQgMTMwIDM0NiAxMDAgQzM1NCA4MiAzNDQgNjUgMzI1IDY1IEMzNDAgODYgMzIyIDEwNyAyOTAgMTE2IEMzMTQgOTQgMzA5IDcyIDI5MCA2NiBDMjY0IDkyIDI1NCAxMjAgMjUyIDE1MCBaIiBmaWxsPSIjNEEzMjIxIj48L3BhdGg+PHBhdGggZD0iTTE2OCAyNDggQzE2NiAxOTQgMTk2IDE1NiAyNDAgMTU2IEMyODQgMTU2IDMxNCAxOTQgMzEyIDI0OCBDMzAwIDIxNiAyODAgMjAyIDI0MCAyMDIgQzIwMCAyMDIgMTg0IDIxNiAxNzYgMjQ4IFoiIGZpbGw9IiM0QTMyMjEiPjwvcGF0aD48cGF0aCBkPSJNMTIwIDYwMCBDMTI0IDUyMCAxNjggNDc4IDI0MCA0NzggQzMxMiA0NzggMzU2IDUyMCAzNjAgNjAwIFoiIGZpbGw9IiNGM0IzQzAiPjwvcGF0aD48cGF0aCBkPSJNMTIwIDYwMCBDMTIzIDU0OCAxNDYgNTEyIDE4OCA0OTIgQzE2NiA1MTQgMTU0IDU1MiAxNTQgNjAwIFoiIGZpbGw9IiNFNTkyQTQiPjwvcGF0aD48cGF0aCBkPSJNMjE0IDM3MiBoNTIgdjQ0IGMwIDE4IC0xMSAzMCAtMjYgMzAgcy0yNiAtMTIgLTI2IC0zMCB6IiBmaWxsPSIjRUZCNDg5Ij48L3BhdGg+PHBhdGggZD0iTTIxNCAzODYgYzE0IDEyIDM4IDEyIDUyIDAgdi0xNCBoLTUyIHoiIGZpbGw9IiNEODlFNkUiPjwvcGF0aD48cGF0aCBkPSJNMjE0IDQ4MCBMMjQwIDUyMCBMMjY2IDQ4MCBDMjUwIDQ4NiAyMzAgNDg2IDIxNCA0ODAgWiIgZmlsbD0iI0VGQjQ4OSI+PC9wYXRoPjxwYXRoIGQ9Ik0xNjggMjUyIEMxNjYgMjA4IDE5MiAxNzIgMjQwIDE3MiBDMjg4IDE3MiAzMTQgMjA4IDMxMiAyNTIgQzMxMCAyOTggMjk2IDM0MCAyNjggMzY2IEMyNTcgMzc3IDI1MCAzODEgMjQwIDM4MSBDMjMwIDM4MSAyMjMgMzc3IDIxMiAzNjYgQzE4NCAzNDAgMTcwIDI5OCAxNjggMjUyIFoiIGZpbGw9IiNFRkI0ODkiPjwvcGF0aD48cGF0aCBkPSJNMTY2IDI3MCBjLTEyIC0yIC0yMCA4IC0xNiAyMCBjMyAxMCAxMyAxNiAyMiAxMiB6IiBmaWxsPSIjRUZCNDg5Ij48L3BhdGg+PHBhdGggZD0iTTMxNCAyNzAgYzEyIC0yIDIwIDggMTYgMjAgYy0zIDEwIC0xMyAxNiAtMjIgMTIgeiIgZmlsbD0iI0VGQjQ4OSI+PC9wYXRoPjxlbGxpcHNlIGN4PSIxOTgiIGN5PSIzMDIiIHJ4PSIyMSIgcnk9IjEzIiBmaWxsPSIjRTg4OTZCIiBvcGFjaXR5PSIuNCI+PC9lbGxpcHNlPjxlbGxpcHNlIGN4PSIyODIiIGN5PSIzMDIiIHJ4PSIyMSIgcnk9IjEzIiBmaWxsPSIjRTg4OTZCIiBvcGFjaXR5PSIuNCI+PC9lbGxpcHNlPjxwYXRoIGQ9Ik0xODIgMjc0IEMxOTMgMjU4IDIyMSAyNTggMjMyIDI3NCBDMjIxIDI4OCAxOTMgMjg4IDE4MiAyNzQgWiIgZmlsbD0iI0ZERkRGRCI+PC9wYXRoPjxwYXRoIGQ9Ik0yNTggMjc0IEMyNjkgMjU4IDI5NyAyNTggMzA4IDI3NCBDMjk3IDI4OCAyNjkgMjg4IDI1OCAyNzQgWiIgZmlsbD0iI0ZERkRGRCI+PC9wYXRoPjxjaXJjbGUgY3g9IjIwNyIgY3k9IjI3NCIgcj0iMTMuNSIgZmlsbD0iIzM5MzIzRiI+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjgzIiBjeT0iMjc0IiByPSIxMy41IiBmaWxsPSIjMzkzMjNGIj48L2NpcmNsZT48cGF0aCBkPSJNMTgyIDI3NCBDMTkzIDI1NyAyMjEgMjU3IDIzMiAyNzQgQzIyMSAyODkgMTkzIDI4OSAxODIgMjc0IFoiIGZpbGw9IiNGREZERkQiIG9wYWNpdHk9IjAiPjwvcGF0aD48Y2lyY2xlIGN4PSIyMDciIGN5PSIyNzQiIHI9IjYiIGZpbGw9IiMxNTExMUIiPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjI4MyIgY3k9IjI3NCIgcj0iNiIgZmlsbD0iIzE1MTExQiI+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjEyIiBjeT0iMjY5IiByPSI0LjUiIGZpbGw9IiNGREZERkQiPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjI4OCIgY3k9IjI2OSIgcj0iNC41IiBmaWxsPSIjRkRGREZEIj48L2NpcmNsZT48cGF0aCBkPSJNMTgwIDI3NCBDMTkyIDI1NCAyMjIgMjU0IDIzNCAyNzMiIHN0cm9rZT0iIzFCMTYyMiIgc3Ryb2tlLXdpZHRoPSI0LjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSI+PC9wYXRoPjxwYXRoIGQ9Ik0yNTYgMjc0IEMyNjggMjU0IDI5OCAyNTQgMzEwIDI3MyIgc3Ryb2tlPSIjMUIxNjIyIiBzdHJva2Utd2lkdGg9IjQuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWxsPSJub25lIj48L3BhdGg+PHBhdGggZD0iTTE4MCAyNzMgbC05IC00IE0xODQgMjY2IGwtNyAtNiIgc3Ryb2tlPSIjMUIxNjIyIiBzdHJva2Utd2lkdGg9IjMuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48L3BhdGg+PHBhdGggZD0iTTMxMCAyNzMgbDkgLTQgTTMwNiAyNjYgbDcgLTYiIHN0cm9rZT0iIzFCMTYyMiIgc3Ryb2tlLXdpZHRoPSIzLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+PC9wYXRoPjxwYXRoIGQ9Ik0xODYgMjM4IEMxOTggMjMwIDIxOCAyMzAgMjMwIDIzNiBDMjE4IDIzMyAyMDIgMjM0IDE4OCAyNDIgWiIgZmlsbD0iIzNBMkExQyI+PC9wYXRoPjxwYXRoIGQ9Ik0yNTAgMjM2IEMyNjIgMjMwIDI4MiAyMzAgMjk0IDIzOCBDMjgwIDIzNCAyNjQgMjMzIDI1MSAyNDIgWiIgZmlsbD0iIzNBMkExQyI+PC9wYXRoPjxwYXRoIGQ9Ik0yMzYgMjk4IGMtMyA5IC03IDE1IC0xMSAxOCBjNCAzIDkgMyAxMyAxIiBzdHJva2U9IiNEODlFNkUiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWxsPSJub25lIiBvcGFjaXR5PSIuNzUiPjwvcGF0aD48cGF0aCBkPSJNMjIyIDMzMiBjNiAtNSAxMiAtNCAxOCAtMSBjNiAtMyAxMiAtMyAxNyAxIGMtNSAyIC0xMSAxIC0xNyAxIGMtNiAwIC0xMiAxIC0xOCAtMiB6IiBmaWxsPSIjQjY1QzRFIj48L3BhdGg+PHBhdGggZD0iTTIyMiAzMzIgYzcgNyAyOCA3IDM1IC0xIGMtMiA5IC0xMCAxNSAtMTcgMTUgYy04IDAgLTE1IC01IC0xOCAtMTQgeiIgZmlsbD0iI0NFNzA2MCI+PC9wYXRoPjxlbGxpcHNlIGN4PSIyMzgiIGN5PSIzNDMiIHJ4PSI3IiByeT0iMi42IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIuMyI+PC9lbGxpcHNlPjxwYXRoIGQ9Ik0xNzIgMjUwIEMxNzAgMTk4IDE5OCAxNTggMjQwIDE1OCBDMjgyIDE1OCAzMTIgMTk2IDMxMiAyNDggQzMwMCAyMjQgMjgwIDIxMiAyNTggMjE2IEMyNzIgMjMwIDI3NCAyNDggMjcwIDI2MiBDMjUyIDI0MiAyMjYgMjM4IDIwOCAyNDQgQzE5NCAyNDggMTgyIDI1MCAxNzIgMjUwIFoiIGZpbGw9IiM0QTMyMjEiPjwvcGF0aD48ZWxsaXBzZSBjeD0iMjU4IiBjeT0iMTUzIiByeD0iOSIgcnk9IjEyIiBmaWxsPSIjRkY2RjlDIiB0cmFuc2Zvcm09InJvdGF0ZSgtMjIgMjU4IDE1MykiPjwvZWxsaXBzZT48cGF0aCBkPSJNMjEwIDE3MiBDMTkyIDE4NiAxODIgMjEyIDE4NCAyNDIiIHN0cm9rZT0iIzZFNEMyRSIgc3Ryb2tlLXdpZHRoPSIzLjUiIG9wYWNpdHk9Ii41NSIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48L3BhdGg+PGNpcmNsZSBjeD0iMTY2IiBjeT0iMzAyIiByPSIxMSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRUNDMDRFIiBzdHJva2Utd2lkdGg9IjUiPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjMxNCIgY3k9IjMwMiIgcj0iMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0VDQzA0RSIgc3Ryb2tlLXdpZHRoPSI1Ij48L2NpcmNsZT48L3N2Zz4=" alt="איור נערה מתאפרת" />
+      </div>
+      <div class="hv-chip">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNDAwIiBmaWxsPSJub25lIj4KICA8cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgZmlsbD0iI0ZGM0Q3NyI+PC9yZWN0PgogIDxnIGZpbGw9IiNGRkY2RTYiPjxwYXRoIGQ9Ik03MCA4NmMxMC0xIDE2LTcgMTctMTcgMSAxMCA3IDE2IDE3IDE3LTEwIDEtMTYgNy0xNyAxNy0xLTEwLTctMTYtMTctMTd6Ij48L3BhdGg+PC9nPgogIDxjaXJjbGUgY3g9IjIwMCIgY3k9IjIwNiIgcj0iMTIwIiBmaWxsPSIjRkZDNzNDIj48L2NpcmNsZT4KICA8ZyB0cmFuc2Zvcm09InJvdGF0ZSgtMTYgMjAwIDIwNikiPgogICAgPHBhdGggZD0iTTE3MiAxMDhoNTZ2NTJsLTExIDI0aC0zNGwtMTEtMjR6IiBmaWxsPSIjRTYyODYyIj48L3BhdGg+CiAgICA8cGF0aCBkPSJNMTcyIDEwOGg1NmwtMTMgMjhoLTMweiIgZmlsbD0iI0ZGNkY5QyI+PC9wYXRoPgogICAgPHBhdGggZD0iTTE3MiAxMDhoNTZ2NTJsLTExIDI0aC0zNGwtMTEtMjR6IiBzdHJva2U9IiMyMTA2MEYiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PC9wYXRoPgogICAgPHJlY3QgeD0iMTYyIiB5PSIxODQiIHdpZHRoPSI3NiIgaGVpZ2h0PSIyMCIgcng9IjUiIGZpbGw9IiNDOUE3RjUiIHN0cm9rZT0iIzIxMDYwRiIgc3Ryb2tlLXdpZHRoPSI1Ij48L3JlY3Q+CiAgICA8cmVjdCB4PSIxNjgiIHk9IjIwNCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjExNiIgcng9IjExIiBmaWxsPSIjRkZGNkU2IiBzdHJva2U9IiMyMTA2MEYiIHN0cm9rZS13aWR0aD0iNSI+PC9yZWN0PgogICAgPGNpcmNsZSBjeD0iMjAwIiBjeT0iMjYyIiByPSIxNSIgZmlsbD0iI0ZGM0Q3NyI+PC9jaXJjbGU+CiAgPC9nPgo8L3N2Zz4=" alt="שפתון" />
+      </div>
+      <div class="hv-badge">
+        <span class="price">₪349</span>
+        <span class="lbl">לכל הקורס</span>
+      </div>
+      <div class="hv-star">בנות 12-16 ✦</div>
+    </div>
+  </div>
+</header>
+
+<!-- Press -->
+<div class="press-row">
+  <div class="press-track">
+    <span>זה כיף משוגע</span><span>רוצה לבוא שוב</span><span>למדתי המון</span><span>תהל הכי מקסימה</span><span>יצאתי עם ביטחון</span><span>הקבוצה הכי כיפית</span><span>ממליצה לכל חברה</span>
+    <span>זה כיף משוגע</span><span>רוצה לבוא שוב</span><span>למדתי המון</span><span>תהל הכי מקסימה</span><span>יצאתי עם ביטחון</span><span>הקבוצה הכי כיפית</span><span>ממליצה לכל חברה</span>
+  </div>
+</div>
+
+<!-- About -->
+<section id="about">
+  <div class="section-header reveal">
+    <div class="section-head-left">
+      <div class="section-num">01</div>
+      <h2 class="section-title">היכרות <span class="hl">עם תהל</span></h2>
+    </div>
+    <div class="section-meta">/ אודות</div>
+  </div>
+  <div class="about-grid">
+    <div class="about-img reveal">
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0ODAgNjAwIiBmaWxsPSJub25lIj48cmVjdCB3aWR0aD0iNDgwIiBoZWlnaHQ9IjYwMCIgZmlsbD0iI0M5QTdGNSI+PC9yZWN0PjxjaXJjbGUgY3g9IjI0MCIgY3k9IjI1MCIgcj0iMTg2IiBmaWxsPSIjRDdCREY3Ij48L2NpcmNsZT48ZyBmaWxsPSIjRkZGNkU2Ij48cGF0aCBkPSJNMzk4IDEzMmM5LTEgMTQtNiAxNS0xNSAxIDkgNiAxNCAxNSAxNS05IDEtMTQgNi0xNSAxNS0xLTktNi0xNC0xNS0xNXoiPjwvcGF0aD48cGF0aCBkPSJNODQgMzk2YzgtMSAxMi01IDEzLTEzIDEgOCA1IDEyIDEzIDEzLTggMS0xMiA1LTEzIDEzLTEtOC01LTEyLTEzLTEzeiI+PC9wYXRoPjwvZz48cGF0aCBkPSJNMjM2IDEyMCBDMTcwIDEyMCAxMzAgMTY4IDEzMCAyMzQgQzEzMCAyODAgMTQyIDMxOCAxNTIgMzU4IEMxNjAgMzg2IDE1OCA0MTYgMTQ2IDQ0MCBDMTcwIDQzNCAxOTAgNDE4IDIwMCAzOTYgQzE5NiA0MjYgMTg2IDQ1NiAxNjYgNDgwIEMyMDYgNDc0IDI0MiA0NDYgMjU0IDQwMiBDMjYwIDQyOCAyNzggNDQ4IDMwMiA0NTggQzI5NyA0MzQgMjk3IDQxMiAzMDAgMzg4IEMzMTggMzU2IDMzNCAzMTQgMzM2IDI1OCBDMzM4IDE3OCAzMDQgMTIwIDIzNiAxMjAgWiIgZmlsbD0iIzI2MzE0RCI+PC9wYXRoPjxwYXRoIGQ9Ik0xMjAgNjAwIEMxMjQgNTIwIDE2OCA0NzggMjQwIDQ3OCBDMzEyIDQ3OCAzNTYgNTIwIDM2MCA2MDAgWiIgZmlsbD0iI0YxOUJCMCI+PC9wYXRoPjxwYXRoIGQ9Ik0xMjAgNjAwIEMxMjMgNTQ4IDE0NiA1MTIgMTg4IDQ5MiBDMTY2IDUxNCAxNTQgNTUyIDE1NCA2MDAgWiIgZmlsbD0iI0UwN0U5OCI+PC9wYXRoPjxwYXRoIGQ9Ik0yMTQgMzcyIGg1MiB2NDQgYzAgMTggLTExIDMwIC0yNiAzMCBzLTI2IC0xMiAtMjYgLTMwIHoiIGZpbGw9IiNFM0E1NzgiPjwvcGF0aD48cGF0aCBkPSJNMjE0IDM4NiBjMTQgMTIgMzggMTIgNTIgMCB2LTE0IGgtNTIgeiIgZmlsbD0iI0NFOEE1RSI+PC9wYXRoPjxwYXRoIGQ9Ik0yMTQgNDgwIEwyNDAgNTIwIEwyNjYgNDgwIEMyNTAgNDg2IDIzMCA0ODYgMjE0IDQ4MCBaIiBmaWxsPSIjRTNBNTc4Ij48L3BhdGg+PHBhdGggZD0iTTE2OCAyNTIgQzE2NiAyMDggMTkyIDE3MiAyNDAgMTcyIEMyODggMTcyIDMxNCAyMDggMzEyIDI1MiBDMzEwIDI5OCAyOTYgMzQwIDI2OCAzNjYgQzI1NyAzNzcgMjUwIDM4MSAyNDAgMzgxIEMyMzAgMzgxIDIyMyAzNzcgMjEyIDM2NiBDMTg0IDM0MCAxNzAgMjk4IDE2OCAyNTIgWiIgZmlsbD0iI0UzQTU3OCI+PC9wYXRoPjxwYXRoIGQ9Ik0xNjYgMjcwIGMtMTIgLTIgLTIwIDggLTE2IDIwIGMzIDEwIDEzIDE2IDIyIDEyIHoiIGZpbGw9IiNFM0E1NzgiPjwvcGF0aD48cGF0aCBkPSJNMzE0IDI3MCBjMTIgLTIgMjAgOCAxNiAyMCBjLTMgMTAgLTEzIDE2IC0yMiAxMiB6IiBmaWxsPSIjRTNBNTc4Ij48L3BhdGg+PGVsbGlwc2UgY3g9IjE5OCIgY3k9IjMwMiIgcng9IjIxIiByeT0iMTMiIGZpbGw9IiNFODg5NkIiIG9wYWNpdHk9Ii40Ij48L2VsbGlwc2U+PGVsbGlwc2UgY3g9IjI4MiIgY3k9IjMwMiIgcng9IjIxIiByeT0iMTMiIGZpbGw9IiNFODg5NkIiIG9wYWNpdHk9Ii40Ij48L2VsbGlwc2U+PHBhdGggZD0iTTE4MiAyNzQgQzE5MyAyNTggMjIxIDI1OCAyMzIgMjc0IEMyMjEgMjg4IDE5MyAyODggMTgyIDI3NCBaIiBmaWxsPSIjRkRGREZEIj48L3BhdGg+PHBhdGggZD0iTTI1OCAyNzQgQzI2OSAyNTggMjk3IDI1OCAzMDggMjc0IEMyOTcgMjg4IDI2OSAyODggMjU4IDI3NCBaIiBmaWxsPSIjRkRGREZEIj48L3BhdGg+PGNpcmNsZSBjeD0iMjA3IiBjeT0iMjc0IiByPSIxMy41IiBmaWxsPSIjMzkzMjNGIj48L2NpcmNsZT48Y2lyY2xlIGN4PSIyODMiIGN5PSIyNzQiIHI9IjEzLjUiIGZpbGw9IiMzOTMyM0YiPjwvY2lyY2xlPjxwYXRoIGQ9Ik0xODIgMjc0IEMxOTMgMjU3IDIyMSAyNTcgMjMyIDI3NCBDMjIxIDI4OSAxOTMgMjg5IDE4MiAyNzQgWiIgZmlsbD0iI0ZERkRGRCIgb3BhY2l0eT0iMCI+PC9wYXRoPjxjaXJjbGUgY3g9IjIwNyIgY3k9IjI3NCIgcj0iNiIgZmlsbD0iIzE1MTExQiI+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjgzIiBjeT0iMjc0IiByPSI2IiBmaWxsPSIjMTUxMTFCIj48L2NpcmNsZT48Y2lyY2xlIGN4PSIyMTIiIGN5PSIyNjkiIHI9IjQuNSIgZmlsbD0iI0ZERkRGRCI+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjg4IiBjeT0iMjY5IiByPSI0LjUiIGZpbGw9IiNGREZERkQiPjwvY2lyY2xlPjxwYXRoIGQ9Ik0xODAgMjc0IEMxOTIgMjU0IDIyMiAyNTQgMjM0IDI3MyIgc3Ryb2tlPSIjMUIxNjIyIiBzdHJva2Utd2lkdGg9IjQuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWxsPSJub25lIj48L3BhdGg+PHBhdGggZD0iTTI1NiAyNzQgQzI2OCAyNTQgMjk4IDI1NCAzMTAgMjczIiBzdHJva2U9IiMxQjE2MjIiIHN0cm9rZS13aWR0aD0iNC41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIGZpbGw9Im5vbmUiPjwvcGF0aD48cGF0aCBkPSJNMTgwIDI3MyBsLTkgLTQgTTE4NCAyNjYgbC03IC02IiBzdHJva2U9IiMxQjE2MjIiIHN0cm9rZS13aWR0aD0iMy41IiBzdHJva2UtbGluZWNhcD0icm91bmQiPjwvcGF0aD48cGF0aCBkPSJNMzEwIDI3MyBsOSAtNCBNMzA2IDI2NiBsNyAtNiIgc3Ryb2tlPSIjMUIxNjIyIiBzdHJva2Utd2lkdGg9IjMuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48L3BhdGg+PHBhdGggZD0iTTE4NiAyMzggQzE5OCAyMzAgMjE4IDIzMCAyMzAgMjM2IEMyMTggMjMzIDIwMiAyMzQgMTg4IDI0MiBaIiBmaWxsPSIjMjYzMTREIj48L3BhdGg+PHBhdGggZD0iTTI1MCAyMzYgQzI2MiAyMzAgMjgyIDIzMCAyOTQgMjM4IEMyODAgMjM0IDI2NCAyMzMgMjUxIDI0MiBaIiBmaWxsPSIjMjYzMTREIj48L3BhdGg+PHBhdGggZD0iTTIzNiAyOTggYy0zIDkgLTcgMTUgLTExIDE4IGM0IDMgOSAzIDEzIDEiIHN0cm9rZT0iI0NFOEE1RSIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIGZpbGw9Im5vbmUiIG9wYWNpdHk9Ii43NSI+PC9wYXRoPjxwYXRoIGQ9Ik0yMjIgMzMyIGM2IC01IDEyIC00IDE4IC0xIGM2IC0zIDEyIC0zIDE3IDEgYy01IDIgLTExIDEgLTE3IDEgYy02IDAgLTEyIDEgLTE4IC0yIHoiIGZpbGw9IiNCNjVDNEUiPjwvcGF0aD48cGF0aCBkPSJNMjIyIDMzMiBjNyA3IDI4IDcgMzUgLTEgYy0yIDkgLTEwIDE1IC0xNyAxNSBjLTggMCAtMTUgLTUgLTE4IC0xNCB6IiBmaWxsPSIjQ0U3MDYwIj48L3BhdGg+PGVsbGlwc2UgY3g9IjIzOCIgY3k9IjM0MyIgcng9IjciIHJ5PSIyLjYiIGZpbGw9IiNmZmYiIG9wYWNpdHk9Ii4zIj48L2VsbGlwc2U+PHBhdGggZD0iTTE2NiAyNTAgQzE2MiAxOTggMTg4IDE1MiAyMzggMTUyIEMzMDAgMTUyIDMzNCAxOTIgMzM0IDI1MiBDMzI2IDIyOCAzMDggMjEwIDI4NCAyMDYgQzMwMCAyMjQgMzA2IDI0NiAzMDAgMjY2IEMyNzggMjQwIDI0MCAyMzIgMjA2IDI0MCBDMTkwIDI0NCAxNzYgMjQ4IDE2NiAyNTAgWiIgZmlsbD0iIzI2MzE0RCI+PC9wYXRoPjxwYXRoIGQ9Ik0xNzAgMjUyIEMxNTAgMzAwIDE1MCAzNTggMTYyIDQwOCBDMTY4IDQzNiAxNjAgNDY2IDE0NCA0ODIgQzE4MCA0NzQgMjEwIDQ0NiAyMTYgNDA0IEMyMjIgMzU2IDIxMiAzMDAgMTk4IDI2MiBDMTkwIDI1MiAxNzggMjQ4IDE3MCAyNTIgWiIgZmlsbD0iIzI2MzE0RCI+PC9wYXRoPjxnIHN0cm9rZT0iIzNCNEE2QiIgc3Ryb2tlLXdpZHRoPSIzLjUiIG9wYWNpdHk9Ii41IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiPjxwYXRoIGQ9Ik0xODIgMjAwIEMxNjggMjIyIDE2MCAyNTYgMTY0IDI5NiI+PC9wYXRoPjxwYXRoIGQ9Ik0yODYgMTc4IEMzMDYgMTk4IDMxOCAyMzAgMzE4IDI2OCI+PC9wYXRoPjwvZz48L3N2Zz4=" alt="איור של תהל" />
+      <span class="tag">תהל · 18 ✦</span>
+    </div>
+    <div class="about-text reveal">
+      <p class="quote">היופי האמיתי הוא כשנערה מסתכלת במראה <span class="hl">ורואה את עצמה</span> — רק קצת יותר.</p>
+      <p>תהל היא מאפרת ומעצבת תסרוקות עם ארבע שנות ניסיון. בת 18, מתעסקת ביופי מאז גיל 14, ומאז גיבשה שיטה אחת ברורה: איפור הוא לא מסכה — הוא שפה.</p>
+      <p>בקורס שלה היא לוקחת את מה שלמדה מאינספור פגישות, חתונות והפקות, ומתרגמת אותו לשפה פשוטה, מדויקת וכיפית — שמתאימה בדיוק לגיל 12-16.</p>
+      <div class="about-stats">
+        <div class="stat"><div class="num">04</div><div class="label">שנות ניסיון</div></div>
+        <div class="stat"><div class="num">120+</div><div class="label">לקוחות מרוצות</div></div>
+        <div class="stat"><div class="num">★5.0</div><div class="label">דירוג ממוצע</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Course -->
+<section id="course" class="course">
+  <div class="section-header reveal">
+    <div class="section-head-left">
+      <div class="section-num">02</div>
+      <h2 class="section-title">על <span class="hl">הקורס</span></h2>
+    </div>
+    <div class="section-meta">/ הקורס</div>
+  </div>
+  <div class="course-grid">
+    <div class="reveal">
+      <h3 class="course-headline">קורס <span class="hl">איפור</span> לנערות. טבעי, יפה ו<span class="hl">נכון</span> לגיל.</h3>
+      <p class="course-lead">אם את רוצה ללמוד להתאפר בצורה טבעית, יפה ונכונה לגיל שלך — זה בדיוק בשבילך. ארבעה מפגשים אינטימיים בקבוצה קטנה, שבסופם תצאי עם ביטחון, כלים, וערכת איפור משלך.</p>
+      <a href="#contact" class="btn-primary">להבטיח מקום →</a>
+    </div>
+    <div class="course-facts reveal">
+      <div class="fact"><div class="label">קהל יעד</div><div class="value">12-16<small>נערות</small></div></div>
+      <div class="fact"><div class="label">מפגשים</div><div class="value">04<small>שעה כל אחד</small></div></div>
+      <div class="fact"><div class="label">קבוצה</div><div class="value">05<small>בנות בלבד</small></div></div>
+      <div class="fact"><div class="label">השקעה</div><div class="value">₪349<small>לכל הקורס</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Curriculum -->
+<section id="curriculum" class="curriculum">
+  <div class="section-header reveal">
+    <div class="section-head-left">
+      <div class="section-num">03</div>
+      <h2 class="section-title">מה <span class="hl">נלמד</span></h2>
+    </div>
+    <div class="section-meta">/ תוכנית</div>
+  </div>
+  <div class="lessons">
+    <div class="lesson reveal">
+      <div class="num">01</div>
+      <div class="title">בסיס <span class="hl">נכון</span></div>
+      <div class="desc">מייקאפ וקונסילר. איך לבנות עור חלק וטבעי שלא נראה כמו מסכה. כל מה שצריך לדעת על סוג העור שלך.</div>
+      <div class="arrow">←</div>
+    </div>
+    <div class="lesson reveal">
+      <div class="num">02</div>
+      <div class="title">איפור עיניים <span class="hl">עדין</span></div>
+      <div class="desc">צלליות, אייליינר וריסים — איך להוציא את הצבע של העיניים בלי להעמיס. גרסת היומיום של הלוק המושלם.</div>
+      <div class="arrow">←</div>
+    </div>
+    <div class="lesson reveal">
+      <div class="num">03</div>
+      <div class="title">לוקים <span class="hl">לבית ספר</span> וליציאות</div>
+      <div class="desc">שני לוקים מובנים שתסיימי איתם את הקורס. אחד שמתאים לכיתה, ואחד שמוכן לסופ״ש.</div>
+      <div class="arrow">←</div>
+    </div>
+    <div class="lesson reveal">
+      <div class="num">04</div>
+      <div class="title">איזון <span class="hl">מדויק</span></div>
+      <div class="desc">איך להתאפר יפה — בלי להיראות מוגזם. הקו הדק בין &ldquo;יפה&rdquo; ל&ldquo;יותר מדי&rdquo;, וכלל אחד שיעזור לך תמיד לדעת מתי לעצור.</div>
+      <div class="arrow">←</div>
+    </div>
+  </div>
+</section>
+
+<!-- Includes -->
+<section id="includes">
+  <div class="section-header reveal">
+    <div class="section-head-left">
+      <div class="section-num">04</div>
+      <h2 class="section-title">המתנה <span class="hl">שלך</span></h2>
+    </div>
+    <div class="section-meta">/ מתנה</div>
+  </div>
+  <div class="includes-grid">
+    <div class="gift-box reveal">
+      <span class="gift-tag">✦ ערכת מתנה</span>
+      <h3>ערכת איפור <span class="hl">אישית</span>, מתנה לכל משתתפת.</h3>
+      <p>בסיום הקורס כל בת מקבלת ערכת איפור משלה — לקחת הביתה, להמשיך להתאמן, ולהפוך את הידע למשהו יומיומי.</p>
+      <div class="gift-items">
+        <div class="gift-item">קונסילר</div>
+        <div class="gift-item">סומק</div>
+        <div class="gift-item">שפתון</div>
+      </div>
+    </div>
+    <div class="gift-image reveal">
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0ODAgNjAwIiBmaWxsPSJub25lIj4KICA8cmVjdCB3aWR0aD0iNDgwIiBoZWlnaHQ9IjYwMCIgZmlsbD0iI0M5QTdGNSI+PC9yZWN0PgogIDxjaXJjbGUgY3g9IjI0MCIgY3k9IjMwMCIgcj0iMTkwIiBmaWxsPSIjRkZDNzNDIj48L2NpcmNsZT4KICA8ZyBmaWxsPSIjRkZGNkU2Ij48cGF0aCBkPSJNODYgMTMwYzktMSAxNC02IDE1LTE1IDEgOSA2IDE0IDE1IDE1LTkgMS0xNCA2LTE1IDE1LTEtOS02LTE0LTE1LTE1eiI+PC9wYXRoPjxwYXRoIGQ9Ik0zOTIgNDYwYzktMSAxNC02IDE1LTE1IDEgOSA2IDE0IDE1IDE1LTkgMS0xNCA2LTE1IDE1LTEtOS02LTE0LTE1LTE1eiI+PC9wYXRoPjwvZz4KICA8cGF0aCBkPSJNOTYgMzUwYzAtMjYgMjAtNDQgNDgtNDRoMTkyYzI4IDAgNDggMTggNDggNDR2MTU2YzAgMjYtMjAgNDQtNDggNDRIMTQ0Yy0yOCAwLTQ4LTE4LTQ4LTQ0eiIgZmlsbD0iI0ZGM0Q3NyI+PC9wYXRoPgogIDxwYXRoIGQ9Ik05NiAzNTBjMC0yNiAyMC00NCA0OC00NGgxOTJjMjggMCA0OCAxOCA0OCA0NHYxNTZjMCAyNi0yMCA0NC00OCA0NEgxNDRjLTI4IDAtNDgtMTgtNDgtNDR6IiBzdHJva2U9IiMyMTA2MEYiIHN0cm9rZS13aWR0aD0iNiI+PC9wYXRoPgogIDxwYXRoIGQ9Ik05NiAzNzJoMjg4IiBzdHJva2U9IiMyMTA2MEYiIHN0cm9rZS13aWR0aD0iNiI+PC9wYXRoPgogIDxnIHN0cm9rZT0iIzIxMDYwRiIgc3Ryb2tlLXdpZHRoPSI0Ij48cGF0aCBkPSJNMTIwIDM3MnYtOE0xNTAgMzcydi04TTE4MCAzNzJ2LThNMjEwIDM3MnYtOE0yNDAgMzcydi04TTI3MCAzNzJ2LThNMzAwIDM3MnYtOE0zMzAgMzcydi04TTM2MCAzNzJ2LTgiPjwvcGF0aD48L2c+CiAgPGNpcmNsZSBjeD0iMjQwIiBjeT0iMzcyIiByPSIxNCIgZmlsbD0iI0ZGQzczQyIgc3Ryb2tlPSIjMjEwNjBGIiBzdHJva2Utd2lkdGg9IjUiPjwvY2lyY2xlPgogIDxnIHRyYW5zZm9ybT0icm90YXRlKC0xMiAxNzAgMjQwKSI+CiAgICA8cmVjdCB4PSIxNTAiIHk9IjE3MCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjEyMCIgcng9IjEwIiBmaWxsPSIjRkZGNkU2IiBzdHJva2U9IiMyMTA2MEYiIHN0cm9rZS13aWR0aD0iNSI+PC9yZWN0PgogICAgPHBhdGggZD0iTTE1MCAyMDBoNDB2LTE4bC0yMC0yMi0yMCAyMnoiIGZpbGw9IiNGRjNENzciIHN0cm9rZT0iIzIxMDYwRiIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg+CiAgPC9nPgogIDxnIHRyYW5zZm9ybT0icm90YXRlKDggMjUwIDIzMCkiPgogICAgPHJlY3QgeD0iMjMwIiB5PSIxNTAiIHdpZHRoPSIzNiIgaGVpZ2h0PSIxMzAiIHJ4PSI4IiBmaWxsPSIjQzlBN0Y1IiBzdHJva2U9IiMyMTA2MEYiIHN0cm9rZS13aWR0aD0iNSI+PC9yZWN0PgogICAgPHJlY3QgeD0iMjM0IiB5PSIxNDgiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyMCIgcng9IjYiIGZpbGw9IiNGRkM3M0MiIHN0cm9rZT0iIzIxMDYwRiIgc3Ryb2tlLXdpZHRoPSI1Ij48L3JlY3Q+CiAgPC9nPgogIDxnIHRyYW5zZm9ybT0icm90YXRlKDIwIDMzMCAyNTApIj4KICAgIDxjaXJjbGUgY3g9IjMzMCIgY3k9IjIzMCIgcj0iMzQiIGZpbGw9IiNGRkY2RTYiIHN0cm9rZT0iIzIxMDYwRiIgc3Ryb2tlLXdpZHRoPSI1Ij48L2NpcmNsZT4KICAgIDxjaXJjbGUgY3g9IjMzMCIgY3k9IjIzMCIgcj0iMTYiIGZpbGw9IiNGRjZGOUMiPjwvY2lyY2xlPgogIDwvZz4KPC9zdmc+" alt="ערכת איפור" />
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section id="gallery">
+  <div class="section-header reveal">
+    <div class="section-head-left">
+      <div class="section-num">05</div>
+      <h2 class="section-title">גלריית <span class="hl">עבודות</span></h2>
+    </div>
+    <div class="section-meta">/ גלריה</div>
+  </div>
+  <div class="gallery-grid reveal">
+    <div class="gallery-item"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0ODAgNjAwIiBmaWxsPSJub25lIj48cmVjdCB3aWR0aD0iNDgwIiBoZWlnaHQ9IjYwMCIgZmlsbD0iI0ZGRDlDOCI+PC9yZWN0PjxjaXJjbGUgY3g9IjI0MCIgY3k9IjI1MCIgcj0iMTg2IiBmaWxsPSIjRkZFNkQ4Ij48L2NpcmNsZT48ZyBmaWxsPSIjRkY4RkIwIj48cGF0aCBkPSJNMzk4IDEzMmM5LTEgMTQtNiAxNS0xNSAxIDkgNiAxNCAxNSAxNS05IDEtMTQgNi0xNSAxNS0xLTktNi0xNC0xNS0xNXoiPjwvcGF0aD48cGF0aCBkPSJNODQgMzk2YzgtMSAxMi01IDEzLTEzIDEgOCA1IDEyIDEzIDEzLTggMS0xMiA1LTEzIDEzLTEtOC01LTEyLTEzLTEzeiI+PC9wYXRoPjwvZz48cGF0aCBkPSJNMTY4IDI1MiBDMTY2IDE5NCAxOTggMTUyIDI0MCAxNTIgQzI4MiAxNTIgMzE0IDE5NCAzMTIgMjUyIEMzMTYgMzEwIDMxMCAzNjAgMzA1IDQwNSBDMzAzIDM2MCAzMDAgMzAwIDI5NyAyNTggQzI5NCAyMzIgMjcyIDIxNCAyNDAgMjE0IEMyMDggMjE0IDE4NiAyMzIgMTgzIDI1OCBDMTgwIDMwMCAxNzcgMzYwIDE3NSA0MDUgQzE3MCAzNjAgMTY0IDMxMCAxNjggMjUyIFoiIGZpbGw9IiM3QTUyMzAiPjwvcGF0aD48cGF0aCBkPSJNMTIwIDYwMCBDMTI0IDUyMCAxNjggNDc4IDI0MCA0NzggQzMxMiA0NzggMzU2IDUyMCAzNjAgNjAwIFoiIGZpbGw9IiNGRkQwNkIiPjwvcGF0aD48cGF0aCBkPSJNMTIwIDYwMCBDMTIzIDU0OCAxNDYgNTEyIDE4OCA0OTIgQzE2NiA1MTQgMTU0IDU1MiAxNTQgNjAwIFoiIGZpbGw9IiNGMkI4NEEiPjwvcGF0aD48cGF0aCBkPSJNMjE0IDM3MiBoNTIgdjQ0IGMwIDE4IC0xMSAzMCAtMjYgMzAgcy0yNiAtMTIgLTI2IC0zMCB6IiBmaWxsPSIjRjJDMjlBIj48L3BhdGg+PHBhdGggZD0iTTIxNCAzODYgYzE0IDEyIDM4IDEyIDUyIDAgdi0xNCBoLTUyIHoiIGZpbGw9IiNEQ0E4NzciPjwvcGF0aD48cGF0aCBkPSJNMjE0IDQ4MCBMMjQwIDUyMCBMMjY2IDQ4MCBDMjUwIDQ4NiAyMzAgNDg2IDIxNCA0ODAgWiIgZmlsbD0iI0YyQzI5QSI+PC9wYXRoPjxwYXRoIGQ9Ik0xNjggMjUyIEMxNjYgMjA4IDE5MiAxNzIgMjQwIDE3MiBDMjg4IDE3MiAzMTQgMjA4IDMxMiAyNTIgQzMxMCAyOTggMjk2IDM0MCAyNjggMzY2IEMyNTcgMzc3IDI1MCAzODEgMjQwIDM4MSBDMjMwIDM4MSAyMjMgMzc3IDIxMiAzNjYgQzE4NCAzNDAgMTcwIDI5OCAxNjggMjUyIFoiIGZpbGw9IiNGMkMyOUEiPjwvcGF0aD48cGF0aCBkPSJNMTY2IDI3MCBjLTEyIC0yIC0yMCA4IC0xNiAyMCBjMyAxMCAxMyAxNiAyMiAxMiB6IiBmaWxsPSIjRjJDMjlBIj48L3BhdGg+PHBhdGggZD0iTTMxNCAyNzAgYzEyIC0yIDIwIDggMTYgMjAgYy0zIDEwIC0xMyAxNiAtMjIgMTIgeiIgZmlsbD0iI0YyQzI5QSI+PC9wYXRoPjxlbGxpcHNlIGN4PSIxOTgiIGN5PSIzMDIiIHJ4PSIyMSIgcnk9IjEzIiBmaWxsPSIjRTg4OTZCIiBvcGFjaXR5PSIuNCI+PC9lbGxpcHNlPjxlbGxpcHNlIGN4PSIyODIiIGN5PSIzMDIiIHJ4PSIyMSIgcnk9IjEzIiBmaWxsPSIjRTg4OTZCIiBvcGFjaXR5PSIuNCI+PC9lbGxpcHNlPjxwYXRoIGQ9Ik0xODIgMjc0IEMxOTMgMjU4IDIyMSAyNTggMjMyIDI3NCBDMjIxIDI4OCAxOTMgMjg4IDE4MiAyNzQgWiIgZmlsbD0iI0ZERkRGRCI+PC9wYXRoPjxwYXRoIGQ9Ik0yNTggMjc0IEMyNjkgMjU4IDI5NyAyNTggMzA4IDI3NCBDMjk3IDI4OCAyNjkgMjg4IDI1OCAyNzQgWiIgZmlsbD0iI0ZERkRGRCI+PC9wYXRoPjxjaXJjbGUgY3g9IjIwNyIgY3k9IjI3NCIgcj0iMTMuNSIgZmlsbD0iIzM5MzIzRiI+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjgzIiBjeT0iMjc0IiByPSIxMy41IiBmaWxsPSIjMzkzMjNGIj48L2NpcmNsZT48cGF0aCBkPSJNMTgyIDI3NCBDMTkzIDI1NyAyMjEgMjU3IDIzMiAyNzQgQzIyMSAyODkgMTkzIDI4OSAxODIgMjc0IFoiIGZpbGw9IiNGREZERkQiIG9wYWNpdHk9IjAiPjwvcGF0aD48Y2lyY2xlIGN4PSIyMDciIGN5PSIyNzQiIHI9IjYiIGZpbGw9IiMxNTExMUIiPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjI4MyIgY3k9IjI3NCIgcj0iNiIgZmlsbD0iIzE1MTExQiI+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjEyIiBjeT0iMjY5IiByPSI0LjUiIGZpbGw9IiNGREZERkQiPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjI4OCIgY3k9IjI2OSIgcj0iNC41IiBmaWxsPSIjRkRGREZEIj48L2NpcmNsZT48cGF0aCBkPSJNMTgwIDI3NCBDMTkyIDI1NCAyMjIgMjU0IDIzNCAyNzMiIHN0cm9rZT0iIzFCMTYyMiIgc3Ryb2tlLXdpZHRoPSI0LjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSI+PC9wYXRoPjxwYXRoIGQ9Ik0yNTYgMjc0IEMyNjggMjU0IDI5OCAyNTQgMzEwIDI3MyIgc3Ryb2tlPSIjMUIxNjIyIiBzdHJva2Utd2lkdGg9IjQuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWxsPSJub25lIj48L3BhdGg+PHBhdGggZD0iTTE4MCAyNzMgbC05IC00IE0xODQgMjY2IGwtNyAtNiIgc3Ryb2tlPSIjMUIxNjIyIiBzdHJva2Utd2lkdGg9IjMuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48L3BhdGg+PHBhdGggZD0iTTMxMCAyNzMgbDkgLTQgTTMwNiAyNjYgbDcgLTYiIHN0cm9rZT0iIzFCMTYyMiIgc3Ryb2tlLXdpZHRoPSIzLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+PC9wYXRoPjxwYXRoIGQ9Ik0xODYgMjM4IEMxOTggMjMwIDIxOCAyMzAgMjMwIDIzNiBDMjE4IDIzMyAyMDIgMjM0IDE4OCAyNDIgWiIgZmlsbD0iIzVBNDAyOCI+PC9wYXRoPjxwYXRoIGQ9Ik0yNTAgMjM2IEMyNjIgMjMwIDI4MiAyMzAgMjk0IDIzOCBDMjgwIDIzNCAyNjQgMjMzIDI1MSAyNDIgWiIgZmlsbD0iIzVBNDAyOCI+PC9wYXRoPjxwYXRoIGQ9Ik0yMzYgMjk4IGMtMyA5IC03IDE1IC0xMSAxOCBjNCAzIDkgMyAxMyAxIiBzdHJva2U9IiNEQ0E4NzciIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWxsPSJub25lIiBvcGFjaXR5PSIuNzUiPjwvcGF0aD48cGF0aCBkPSJNMjIyIDMzMiBjNiAtNSAxMiAtNCAxOCAtMSBjNiAtMyAxMiAtMyAxNyAxIGMtNSAyIC0xMSAxIC0xNyAxIGMtNiAwIC0xMiAxIC0xOCAtMiB6IiBmaWxsPSIjQjY1QzRFIj48L3BhdGg+PHBhdGggZD0iTTIyMiAzMzIgYzcgNyAyOCA3IDM1IC0xIGMtMiA5IC0xMCAxNSAtMTcgMTUgYy04IDAgLTE1IC01IC0xOCAtMTQgeiIgZmlsbD0iI0NFNzA2MCI+PC9wYXRoPjxlbGxpcHNlIGN4PSIyMzgiIGN5PSIzNDMiIHJ4PSI3IiByeT0iMi42IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIuMyI+PC9lbGxpcHNlPjxwYXRoIGQ9Ik0yNDAgMTU0IEMxOTggMTU0IDE3OCAxOTIgMTc0IDI1MCBDMTg4IDIyNiAyMDggMjEyIDIzMiAyMTQgQzIzOCAyMDggMjQwIDE4MiAyNDAgMTU0IFoiIGZpbGw9IiM3QTUyMzAiPjwvcGF0aD48cGF0aCBkPSJNMjQwIDE1NCBDMjgyIDE1NCAzMDIgMTkyIDMwNiAyNTAgQzI5MiAyMjYgMjcyIDIxMiAyNDggMjE0IEMyNDIgMjA4IDI0MCAxODIgMjQwIDE1NCBaIiBmaWxsPSIjN0E1MjMwIj48L3BhdGg+PGcgc3Ryb2tlPSIjOUM2RTQwIiBzdHJva2Utd2lkdGg9IjMuNSIgb3BhY2l0eT0iLjUiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+PHBhdGggZD0iTTE3OCAyNTAgQzE3MCAzMDAgMTcwIDM1NiAxNzggNDAwIj48L3BhdGg+PHBhdGggZD0iTTMwMiAyNTAgQzMxMCAzMDAgMzEwIDM1NiAzMDIgNDAwIj48L3BhdGg+PC9nPjxjaXJjbGUgY3g9IjE2NiIgY3k9IjMwMiIgcj0iMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0VDQzA0RSIgc3Ryb2tlLXdpZHRoPSI1Ij48L2NpcmNsZT48Y2lyY2xlIGN4PSIzMTQiIGN5PSIzMDIiIHI9IjExIiBmaWxsPSJub25lIiBzdHJva2U9IiNFQ0MwNEUiIHN0cm9rZS13aWR0aD0iNSI+PC9jaXJjbGU+PC9zdmc+" alt="" /><span class="gallery-caption">Soft Glow</span></div>
+    <div class="gallery-item"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgNTAwIiBmaWxsPSJub25lIj4KICA8cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iI0UzQTU3OCI+PC9yZWN0PgogIDxwYXRoIGQ9Ik0xMjAgMjUwIHExMzAtMTIwIDI2MCAwIHEtMTMwIDM2LTI2MCAweiIgZmlsbD0iI0I5OEFFMCIgb3BhY2l0eT0iLjc1Ij48L3BhdGg+CiAgPHBhdGggZD0iTTE1MCAxNzYgcTEwMC00MiAyMDAgMCIgc3Ryb2tlPSIjMjYzMTREIiBzdHJva2Utd2lkdGg9IjE2IiBzdHJva2UtbGluZWNhcD0icm91bmQiPjwvcGF0aD4KICA8cGF0aCBkPSJNMTMwIDI1NiBxMTIwLTk0IDI0MCAwIHEtMTIwIDcwLTI0MCAweiIgZmlsbD0iI0ZERkRGRCI+PC9wYXRoPgogIDxjaXJjbGUgY3g9IjI1MCIgY3k9IjI1MCIgcj0iNTAiIGZpbGw9IiMzOTMyM0YiPjwvY2lyY2xlPgogIDxjaXJjbGUgY3g9IjI1MCIgY3k9IjI1MCIgcj0iMjgiIGZpbGw9IiMxNTExMUIiPjwvY2lyY2xlPgogIDxjaXJjbGUgY3g9IjI2NiIgY3k9IjIzNiIgcj0iMTIiIGZpbGw9IiNGREZERkQiPjwvY2lyY2xlPgogIDxwYXRoIGQ9Ik0xMjYgMjUwIHExMjQtMTA0IDI0OCAwIHExNC0yIDMwLTIwIiBzdHJva2U9IiMxNTExMUIiIHN0cm9rZS13aWR0aD0iMTQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSI+PC9wYXRoPgogIDxnIHN0cm9rZT0iIzE1MTExQiIgc3Ryb2tlLXdpZHRoPSIxMSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48cGF0aCBkPSJNMTUwIDE5NmwtMjItMjZNMTk2IDE3OGwtMTItMzBNMjUwIDE3MmwwLTMyTTMwNCAxNzhsMTItMzBNMzUyIDE5NmwyMi0yNiI+PC9wYXRoPjwvZz4KICA8ZyBmaWxsPSIjRkZGNkU2Ij48cGF0aCBkPSJNNDA0IDEyMGMxMC0xIDE2LTcgMTctMTcgMSAxMCA3IDE2IDE3IDE3LTEwIDEtMTYgNy0xNyAxNy0xLTEwLTctMTYtMTctMTd6Ij48L3BhdGg+PC9nPgo8L3N2Zz4=" alt="" /><span class="gallery-caption">Eye Detail</span></div>
+    <div class="gallery-item"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgNTAwIiBmaWxsPSJub25lIj4KICA8cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iI0M5QTdGNSI+PC9yZWN0PgogIDxjaXJjbGUgY3g9IjI1MCIgY3k9IjI1MCIgcj0iMTUwIiBmaWxsPSIjRkZGMUVBIj48L2NpcmNsZT4KICA8cGF0aCBkPSJNMTMwIDI0OCBxNDAtMTYgNjAtMiBxMzAtMjIgNjAtMjIgdDYwIDIyIHEyMC0xNCA2MCAyIHEtMzAgMjYtNjAgMzAgcS0zMCA2LTYwLTYgcS0zMCAxMi02MCA2IHEtMzAtNC02MC0zMHoiIGZpbGw9IiNFMTRENzQiPjwvcGF0aD4KICA8cGF0aCBkPSJNMTMwIDI0OCBxNjAgMTggMTIwIDE4IHQxMjAtMTgiIHN0cm9rZT0iI0E4MzQ0QiIgc3Ryb2tlLXdpZHRoPSI2IiBmaWxsPSJub25lIj48L3BhdGg+CiAgPHBhdGggZD0iTTI1MCAyMjQgcS0zMCAyMi02MCAyMiAzMCA4IDYwIDQgMzAgNCA2MC00LTMwIDAtNjAtMjJ6IiBmaWxsPSIjQzUzRjU4Ij48L3BhdGg+CiAgPGVsbGlwc2UgY3g9IjIwMCIgY3k9IjI2MiIgcng9IjIwIiByeT0iOCIgZmlsbD0iI0ZGRjZFNiIgb3BhY2l0eT0iLjYiPjwvZWxsaXBzZT4KICA8ZWxsaXBzZSBjeD0iMzAwIiBjeT0iMjYyIiByeD0iMjAiIHJ5PSI4IiBmaWxsPSIjRkZGNkU2IiBvcGFjaXR5PSIuNiI+PC9lbGxpcHNlPgogIDxnIGZpbGw9IiNGRkM3M0MiPjxwYXRoIGQ9Ik0xMjAgMTUwYzktMSAxNC02IDE1LTE1IDEgOSA2IDE0IDE1IDE1LTkgMS0xNCA2LTE1IDE1LTEtOS02LTE0LTE1LTE1eiI+PC9wYXRoPjwvZz4KPC9zdmc+" alt="" /><span class="gallery-caption">Lips</span></div>
+    <div class="gallery-item"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgNTAwIiBmaWxsPSJub25lIj4KICA8cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iI0ZGM0Q3NyI+PC9yZWN0PgogIDxnIGZpbGw9IiNGRkY2RTYiPjxwYXRoIGQ9Ik00MDQgMTEwYzEwLTEgMTYtNyAxNy0xNyAxIDEwIDcgMTYgMTcgMTctMTAgMS0xNiA3LTE3IDE3LTEtMTAtNy0xNi0xNy0xN3oiPjwvcGF0aD48L2c+CiAgPGcgdHJhbnNmb3JtPSJyb3RhdGUoLTggMjUwIDI1MCkiPgogICAgPHBhdGggZD0iTTExMCAyNTBjMC02NiA1NC0xMjAgMTIwLTEyMGg2djIyOGgtNmMtNjYgMC0xMjAtNTQtMTIwLTEyMHoiIGZpbGw9IiNDOUE3RjUiPjwvcGF0aD4KICAgIDxwYXRoIGQ9Ik0xMzIgMjUwYzAtNTIgNDItOTYgOTYtOTh2MTk2Yy01NC0yLTk2LTQ2LTk2LTk4eiIgZmlsbD0iI0ZGRjZFNiIgb3BhY2l0eT0iLjg1Ij48L3BhdGg+CiAgICA8cGF0aCBkPSJNMTEwIDI1MGMwLTY2IDU0LTEyMCAxMjAtMTIwaDZ2MjI4aC02Yy02NiAwLTEyMC01NC0xMjAtMTIweiIgc3Ryb2tlPSIjMjEwNjBGIiBzdHJva2Utd2lkdGg9IjYiPjwvcGF0aD4KICAgIDxwYXRoIGQ9Ik0zOTAgMjUwYzAtNjYtNTQtMTIwLTEyMC0xMjBoLTZ2MjI4aDZjNjYgMCAxMjAtNTQgMTIwLTEyMHoiIGZpbGw9IiNGRkY2RTYiPjwvcGF0aD4KICAgIDxwYXRoIGQ9Ik0zOTAgMjUwYzAtNjYtNTQtMTIwLTEyMC0xMjBoLTZ2MjI4aDZjNjYgMCAxMjAtNTQgMTIwLTEyMHoiIHN0cm9rZT0iIzIxMDYwRiIgc3Ryb2tlLXdpZHRoPSI2Ij48L3BhdGg+CiAgICA8Y2lyY2xlIGN4PSIzMDYiIGN5PSIyNTAiIHI9IjU4IiBmaWxsPSIjRkY2RjlDIj48L2NpcmNsZT4KICAgIDxjaXJjbGUgY3g9IjMwNiIgY3k9IjI1MCIgcj0iNTgiIHN0cm9rZT0iIzIxMDYwRiIgc3Ryb2tlLXdpZHRoPSI1Ij48L2NpcmNsZT4KICAgIDxlbGxpcHNlIGN4PSIyOTAiIGN5PSIyMzQiIHJ4PSIxNiIgcnk9IjkiIGZpbGw9IiNGRkY2RTYiIG9wYWNpdHk9Ii41Ij48L2VsbGlwc2U+CiAgPC9nPgo8L3N2Zz4=" alt="" /><span class="gallery-caption">Bronze</span></div>
+    <div class="gallery-item"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgNTAwIiBmaWxsPSJub25lIj4KICA8ZGVmcz48Y2xpcFBhdGggaWQ9Im1pciI+PHBhdGggZD0iTTE1OCAzNTZWMjE0YzAtNTIgNDEtOTQgOTItOTRzOTIgNDIgOTIgOTR2MTQyeiI+PC9wYXRoPjwvY2xpcFBhdGg+PC9kZWZzPgogIDxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjQzlBN0Y1Ij48L3JlY3Q+PHJlY3Qgd2lkdGg9IjUwMCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNGRkM3RDkiPjwvcmVjdD4KICA8cGF0aCBkPSJNMTUwIDM2MFYyMTBjMC01NSA0NS0xMDAgMTAwLTEwMHMxMDAgNDUgMTAwIDEwMHYxNTB6IiBmaWxsPSIjRkZGMUVBIiBzdHJva2U9IiMyMTA2MEYiIHN0cm9rZS13aWR0aD0iNiI+PC9wYXRoPgogIDxnIGNsaXAtcGF0aD0idXJsKCNtaXIpIj48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMjAsODYpIHNjYWxlKDAuNTUpIj48cGF0aCBkPSJNMTY4IDI1MCBDMTY2IDE5NiAxOTYgMTU4IDI0MCAxNTggQzI4NCAxNTggMzE0IDE5NiAzMTIgMjUwIEMzMTQgMzAwIDMxMCAzNDQgMzA2IDM4OCBDMzAwIDM2MCAzMDAgMzA2IDI5OCAyODAgQzI5NiAyNTIgMjc4IDIxNiAyNDAgMjE2IEMyMDIgMjE2IDE4NCAyNTIgMTgyIDI4MCBDMTgwIDMwNiAxODAgMzYwIDE3NCAzODggQzE3MCAzNDQgMTY2IDMwMCAxNjggMjUwIFoiIGZpbGw9IiMxQzFBMjIiPjwvcGF0aD48cGF0aCBkPSJNMTIwIDYwMCBDMTI0IDUyMCAxNjggNDc4IDI0MCA0NzggQzMxMiA0NzggMzU2IDUyMCAzNjAgNjAwIFoiIGZpbGw9IiNGM0IzQzAiPjwvcGF0aD48cGF0aCBkPSJNMTIwIDYwMCBDMTIzIDU0OCAxNDYgNTEyIDE4OCA0OTIgQzE2NiA1MTQgMTU0IDU1MiAxNTQgNjAwIFoiIGZpbGw9IiNFNTkyQTQiPjwvcGF0aD48cGF0aCBkPSJNMjE0IDM3MiBoNTIgdjQ0IGMwIDE4IC0xMSAzMCAtMjYgMzAgcy0yNiAtMTIgLTI2IC0zMCB6IiBmaWxsPSIjQzk4QTVFIj48L3BhdGg+PHBhdGggZD0iTTIxNCAzODYgYzE0IDEyIDM4IDEyIDUyIDAgdi0xNCBoLTUyIHoiIGZpbGw9IiNBRTc0NEEiPjwvcGF0aD48cGF0aCBkPSJNMjE0IDQ4MCBMMjQwIDUyMCBMMjY2IDQ4MCBDMjUwIDQ4NiAyMzAgNDg2IDIxNCA0ODAgWiIgZmlsbD0iI0M5OEE1RSI+PC9wYXRoPjxwYXRoIGQ9Ik0xNjggMjUyIEMxNjYgMjA4IDE5MiAxNzIgMjQwIDE3MiBDMjg4IDE3MiAzMTQgMjA4IDMxMiAyNTIgQzMxMCAyOTggMjk2IDM0MCAyNjggMzY2IEMyNTcgMzc3IDI1MCAzODEgMjQwIDM4MSBDMjMwIDM4MSAyMjMgMzc3IDIxMiAzNjYgQzE4NCAzNDAgMTcwIDI5OCAxNjggMjUyIFoiIGZpbGw9IiNDOThBNUUiPjwvcGF0aD48cGF0aCBkPSJNMTY2IDI3MCBjLTEyIC0yIC0yMCA4IC0xNiAyMCBjMyAxMCAxMyAxNiAyMiAxMiB6IiBmaWxsPSIjQzk4QTVFIj48L3BhdGg+PHBhdGggZD0iTTMxNCAyNzAgYzEyIC0yIDIwIDggMTYgMjAgYy0zIDEwIC0xMyAxNiAtMjIgMTIgeiIgZmlsbD0iI0M5OEE1RSI+PC9wYXRoPjxlbGxpcHNlIGN4PSIxOTgiIGN5PSIzMDIiIHJ4PSIyMSIgcnk9IjEzIiBmaWxsPSIjRTg4OTZCIiBvcGFjaXR5PSIuNCI+PC9lbGxpcHNlPjxlbGxpcHNlIGN4PSIyODIiIGN5PSIzMDIiIHJ4PSIyMSIgcnk9IjEzIiBmaWxsPSIjRTg4OTZCIiBvcGFjaXR5PSIuNCI+PC9lbGxpcHNlPjxwYXRoIGQ9Ik0xODIgMjc0IEMxOTMgMjU4IDIyMSAyNTggMjMyIDI3NCBDMjIxIDI4OCAxOTMgMjg4IDE4MiAyNzQgWiIgZmlsbD0iI0ZERkRGRCI+PC9wYXRoPjxwYXRoIGQ9Ik0yNTggMjc0IEMyNjkgMjU4IDI5NyAyNTggMzA4IDI3NCBDMjk3IDI4OCAyNjkgMjg4IDI1OCAyNzQgWiIgZmlsbD0iI0ZERkRGRCI+PC9wYXRoPjxjaXJjbGUgY3g9IjIwNyIgY3k9IjI3NCIgcj0iMTMuNSIgZmlsbD0iIzM5MzIzRiI+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjgzIiBjeT0iMjc0IiByPSIxMy41IiBmaWxsPSIjMzkzMjNGIj48L2NpcmNsZT48Y2lyY2xlIGN4PSIyMDciIGN5PSIyNzQiIHI9IjYiIGZpbGw9IiMxNTExMUIiPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjI4MyIgY3k9IjI3NCIgcj0iNiIgZmlsbD0iIzE1MTExQiI+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjEyIiBjeT0iMjY5IiByPSI0LjUiIGZpbGw9IiNGREZERkQiPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjI4OCIgY3k9IjI2OSIgcj0iNC41IiBmaWxsPSIjRkRGREZEIj48L2NpcmNsZT48cGF0aCBkPSJNMTgwIDI3NCBDMTkyIDI1NCAyMjIgMjU0IDIzNCAyNzMiIHN0cm9rZT0iIzFCMTYyMiIgc3Ryb2tlLXdpZHRoPSI0LjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSI+PC9wYXRoPjxwYXRoIGQ9Ik0yNTYgMjc0IEMyNjggMjU0IDI5OCAyNTQgMzEwIDI3MyIgc3Ryb2tlPSIjMUIxNjIyIiBzdHJva2Utd2lkdGg9IjQuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWxsPSJub25lIj48L3BhdGg+PHBhdGggZD0iTTE4MCAyNzMgbC05IC00IE0xODQgMjY2IGwtNyAtNiIgc3Ryb2tlPSIjMUIxNjIyIiBzdHJva2Utd2lkdGg9IjMuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48L3BhdGg+PHBhdGggZD0iTTMxMCAyNzMgbDkgLTQgTTMwNiAyNjYgbDcgLTYiIHN0cm9rZT0iIzFCMTYyMiIgc3Ryb2tlLXdpZHRoPSIzLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+PC9wYXRoPjxwYXRoIGQ9Ik0xODYgMjM4IEMxOTggMjMwIDIxOCAyMzAgMjMwIDIzNiBDMjE4IDIzMyAyMDIgMjM0IDE4OCAyNDIgWiIgZmlsbD0iIzFDMUEyMiI+PC9wYXRoPjxwYXRoIGQ9Ik0yNTAgMjM2IEMyNjIgMjMwIDI4MiAyMzAgMjk0IDIzOCBDMjgwIDIzNCAyNjQgMjMzIDI1MSAyNDIgWiIgZmlsbD0iIzFDMUEyMiI+PC9wYXRoPjxwYXRoIGQ9Ik0yMzYgMjk4IGMtMyA5IC03IDE1IC0xMSAxOCBjNCAzIDkgMyAxMyAxIiBzdHJva2U9IiNBRTc0NEEiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWxsPSJub25lIiBvcGFjaXR5PSIuNzUiPjwvcGF0aD48cGF0aCBkPSJNMjIyIDMzMiBjNiAtNSAxMiAtNCAxOCAtMSBjNiAtMyAxMiAtMyAxNyAxIGMtNSAyIC0xMSAxIC0xNyAxIGMtNiAwIC0xMiAxIC0xOCAtMiB6IiBmaWxsPSIjQjY1QzRFIj48L3BhdGg+PHBhdGggZD0iTTIyMiAzMzIgYzcgNyAyOCA3IDM1IC0xIGMtMiA5IC0xMCAxNSAtMTcgMTUgYy04IDAgLTE1IC01IC0xOCAtMTQgeiIgZmlsbD0iI0NFNzA2MCI+PC9wYXRoPjxlbGxpcHNlIGN4PSIyMzgiIGN5PSIzNDMiIHJ4PSI3IiByeT0iMi42IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIuMyI+PC9lbGxpcHNlPjxwYXRoIGQ9Ik0xNzQgMjUwIEMxNzIgMTk2IDIwMCAxNTggMjQwIDE1OCBDMjgwIDE1OCAzMDggMTk2IDMwNiAyNDggQzI5NiAyMjQgMjc2IDIxMCAyNDYgMjEyIEMyNTIgMTk4IDI1MCAxNzggMjQwIDE2NCBDMjMwIDE3OCAyMjggMTk4IDIzNCAyMTIgQzIwNCAyMTAgMTg0IDIyNCAxNzQgMjUwIFoiIGZpbGw9IiMxQzFBMjIiPjwvcGF0aD48L2c+PC9nPgogIDxnIGZpbGw9IiNGRkM3M0MiIHN0cm9rZT0iIzIxMDYwRiIgc3Ryb2tlLXdpZHRoPSI0Ij48Y2lyY2xlIGN4PSIxNTAiIGN5PSIzNTAiIHI9IjExIj48L2NpcmNsZT48Y2lyY2xlIGN4PSIxNTAiIGN5PSIzMDAiIHI9IjExIj48L2NpcmNsZT48Y2lyY2xlIGN4PSIxNTAiIGN5PSIyNTAiIHI9IjExIj48L2NpcmNsZT48Y2lyY2xlIGN4PSIxNjYiIGN5PSIyMDAiIHI9IjExIj48L2NpcmNsZT48Y2lyY2xlIGN4PSIyMDAiIGN5PSIxNjAiIHI9IjExIj48L2NpcmNsZT48Y2lyY2xlIGN4PSIyNTAiIGN5PSIxNDYiIHI9IjExIj48L2NpcmNsZT48Y2lyY2xlIGN4PSIzMDAiIGN5PSIxNjAiIHI9IjExIj48L2NpcmNsZT48Y2lyY2xlIGN4PSIzMzQiIGN5PSIyMDAiIHI9IjExIj48L2NpcmNsZT48Y2lyY2xlIGN4PSIzNTAiIGN5PSIyNTAiIHI9IjExIj48L2NpcmNsZT48Y2lyY2xlIGN4PSIzNTAiIGN5PSIzMDAiIHI9IjExIj48L2NpcmNsZT48Y2lyY2xlIGN4PSIzNTAiIGN5PSIzNTAiIHI9IjExIj48L2NpcmNsZT48L2c+CiAgPHJlY3QgeT0iMzgwIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjEyMCIgZmlsbD0iI0ZGM0Q3NyI+PC9yZWN0PjxyZWN0IHk9IjM4MCIgd2lkdGg9IjUwMCIgaGVpZ2h0PSIxMCIgZmlsbD0iIzIxMDYwRiI+PC9yZWN0PgogIDxnIHRyYW5zZm9ybT0icm90YXRlKC0xMCAxMTAgNDMwKSI+PHJlY3QgeD0iOTIiIHk9IjM5NiIgd2lkdGg9IjM0IiBoZWlnaHQ9IjcwIiByeD0iOCIgZmlsbD0iI0ZGRjFFQSIgc3Ryb2tlPSIjMjEwNjBGIiBzdHJva2Utd2lkdGg9IjUiPjwvcmVjdD48cGF0aCBkPSJNOTIgNDE2aDM0di0xMmwtMTctMTYtMTcgMTZ6IiBmaWxsPSIjRTYyODYyIiBzdHJva2U9IiMyMTA2MEYiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PC9wYXRoPjwvZz4KICA8ZyB0cmFuc2Zvcm09InJvdGF0ZSgxMiAzOTAgNDMwKSI+PHJlY3QgeD0iMzcyIiB5PSIzOTQiIHdpZHRoPSIzMCIgaGVpZ2h0PSI3NCIgcng9IjYiIGZpbGw9IiNDOUE3RjUiIHN0cm9rZT0iIzIxMDYwRiIgc3Ryb2tlLXdpZHRoPSI1Ij48L3JlY3Q+PHJlY3QgeD0iMzc1IiB5PSIzOTQiIHdpZHRoPSIyNCIgaGVpZ2h0PSIxNiIgcng9IjUiIGZpbGw9IiNGRkM3M0MiIHN0cm9rZT0iIzIxMDYwRiIgc3Ryb2tlLXdpZHRoPSI1Ij48L3JlY3Q+PC9nPgogIDxjaXJjbGUgY3g9IjI1MCIgY3k9IjQ0OCIgcj0iMjYiIGZpbGw9IiNGRkYxRUEiIHN0cm9rZT0iIzIxMDYwRiIgc3Ryb2tlLXdpZHRoPSI1Ij48L2NpcmNsZT48Y2lyY2xlIGN4PSIyNTAiIGN5PSI0NDgiIHI9IjEyIiBmaWxsPSIjRkY2RjlDIj48L2NpcmNsZT4KPC9zdmc+" alt="" /><span class="gallery-caption">Workshop</span></div>
+    <div class="gallery-item"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0ODAgNjAwIiBmaWxsPSJub25lIj48cmVjdCB3aWR0aD0iNDgwIiBoZWlnaHQ9IjYwMCIgZmlsbD0iI0ZGNkY5QyI+PC9yZWN0PjxjaXJjbGUgY3g9IjI0MCIgY3k9IjI1MCIgcj0iMTg2IiBmaWxsPSIjRkY4OUFDIj48L2NpcmNsZT48ZyBmaWxsPSIjRkZGNkU2Ij48cGF0aCBkPSJNMzk4IDEzMmM5LTEgMTQtNiAxNS0xNSAxIDkgNiAxNCAxNSAxNS05IDEtMTQgNi0xNSAxNS0xLTktNi0xNC0xNS0xNXoiPjwvcGF0aD48cGF0aCBkPSJNODQgMzk2YzgtMSAxMi01IDEzLTEzIDEgOCA1IDEyIDEzIDEzLTggMS0xMiA1LTEzIDEzLTEtOC01LTEyLTEzLTEzeiI+PC9wYXRoPjwvZz48cGF0aCBkPSJNMTY4IDI1MCBDMTY2IDE5NiAxOTYgMTU4IDI0MCAxNTggQzI4NCAxNTggMzE0IDE5NiAzMTIgMjUwIEMzMTQgMzAwIDMxMCAzNDQgMzA2IDM4OCBDMzAwIDM2MCAzMDAgMzA2IDI5OCAyODAgQzI5NiAyNTIgMjc4IDIxNiAyNDAgMjE2IEMyMDIgMjE2IDE4NCAyNTIgMTgyIDI4MCBDMTgwIDMwNiAxODAgMzYwIDE3NCAzODggQzE3MCAzNDQgMTY2IDMwMCAxNjggMjUwIFoiIGZpbGw9IiMxQzFBMjIiPjwvcGF0aD48cGF0aCBkPSJNMTIwIDYwMCBDMTI0IDUyMCAxNjggNDc4IDI0MCA0NzggQzMxMiA0NzggMzU2IDUyMCAzNjAgNjAwIFoiIGZpbGw9IiNDOUE3RjUiPjwvcGF0aD48cGF0aCBkPSJNMTIwIDYwMCBDMTIzIDU0OCAxNDYgNTEyIDE4OCA0OTIgQzE2NiA1MTQgMTU0IDU1MiAxNTQgNjAwIFoiIGZpbGw9IiNBOTg0RTgiPjwvcGF0aD48cGF0aCBkPSJNMjE0IDM3MiBoNTIgdjQ0IGMwIDE4IC0xMSAzMCAtMjYgMzAgcy0yNiAtMTIgLTI2IC0zMCB6IiBmaWxsPSIjQzk4QTVFIj48L3BhdGg+PHBhdGggZD0iTTIxNCAzODYgYzE0IDEyIDM4IDEyIDUyIDAgdi0xNCBoLTUyIHoiIGZpbGw9IiNBRTc0NEEiPjwvcGF0aD48cGF0aCBkPSJNMjE0IDQ4MCBMMjQwIDUyMCBMMjY2IDQ4MCBDMjUwIDQ4NiAyMzAgNDg2IDIxNCA0ODAgWiIgZmlsbD0iI0M5OEE1RSI+PC9wYXRoPjxwYXRoIGQ9Ik0xNjggMjUyIEMxNjYgMjA4IDE5MiAxNzIgMjQwIDE3MiBDMjg4IDE3MiAzMTQgMjA4IDMxMiAyNTIgQzMxMCAyOTggMjk2IDM0MCAyNjggMzY2IEMyNTcgMzc3IDI1MCAzODEgMjQwIDM4MSBDMjMwIDM4MSAyMjMgMzc3IDIxMiAzNjYgQzE4NCAzNDAgMTcwIDI5OCAxNjggMjUyIFoiIGZpbGw9IiNDOThBNUUiPjwvcGF0aD48cGF0aCBkPSJNMTY2IDI3MCBjLTEyIC0yIC0yMCA4IC0xNiAyMCBjMyAxMCAxMyAxNiAyMiAxMiB6IiBmaWxsPSIjQzk4QTVFIj48L3BhdGg+PHBhdGggZD0iTTMxNCAyNzAgYzEyIC0yIDIwIDggMTYgMjAgYy0zIDEwIC0xMyAxNiAtMjIgMTIgeiIgZmlsbD0iI0M5OEE1RSI+PC9wYXRoPjxlbGxpcHNlIGN4PSIxOTgiIGN5PSIzMDIiIHJ4PSIyMSIgcnk9IjEzIiBmaWxsPSIjRTg4OTZCIiBvcGFjaXR5PSIuNCI+PC9lbGxpcHNlPjxlbGxpcHNlIGN4PSIyODIiIGN5PSIzMDIiIHJ4PSIyMSIgcnk9IjEzIiBmaWxsPSIjRTg4OTZCIiBvcGFjaXR5PSIuNCI+PC9lbGxpcHNlPjxwYXRoIGQ9Ik0xODIgMjc0IEMxOTMgMjU4IDIyMSAyNTggMjMyIDI3NCBDMjIxIDI4OCAxOTMgMjg4IDE4MiAyNzQgWiIgZmlsbD0iI0ZERkRGRCI+PC9wYXRoPjxwYXRoIGQ9Ik0yNTggMjc0IEMyNjkgMjU4IDI5NyAyNTggMzA4IDI3NCBDMjk3IDI4OCAyNjkgMjg4IDI1OCAyNzQgWiIgZmlsbD0iI0ZERkRGRCI+PC9wYXRoPjxjaXJjbGUgY3g9IjIwNyIgY3k9IjI3NCIgcj0iMTMuNSIgZmlsbD0iIzM5MzIzRiI+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjgzIiBjeT0iMjc0IiByPSIxMy41IiBmaWxsPSIjMzkzMjNGIj48L2NpcmNsZT48cGF0aCBkPSJNMTgyIDI3NCBDMTkzIDI1NyAyMjEgMjU3IDIzMiAyNzQgQzIyMSAyODkgMTkzIDI4OSAxODIgMjc0IFoiIGZpbGw9IiNGREZERkQiIG9wYWNpdHk9IjAiPjwvcGF0aD48Y2lyY2xlIGN4PSIyMDciIGN5PSIyNzQiIHI9IjYiIGZpbGw9IiMxNTExMUIiPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjI4MyIgY3k9IjI3NCIgcj0iNiIgZmlsbD0iIzE1MTExQiI+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjEyIiBjeT0iMjY5IiByPSI0LjUiIGZpbGw9IiNGREZERkQiPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjI4OCIgY3k9IjI2OSIgcj0iNC41IiBmaWxsPSIjRkRGREZEIj48L2NpcmNsZT48cGF0aCBkPSJNMTgwIDI3NCBDMTkyIDI1NCAyMjIgMjU0IDIzNCAyNzMiIHN0cm9rZT0iIzFCMTYyMiIgc3Ryb2tlLXdpZHRoPSI0LjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSI+PC9wYXRoPjxwYXRoIGQ9Ik0yNTYgMjc0IEMyNjggMjU0IDI5OCAyNTQgMzEwIDI3MyIgc3Ryb2tlPSIjMUIxNjIyIiBzdHJva2Utd2lkdGg9IjQuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWxsPSJub25lIj48L3BhdGg+PHBhdGggZD0iTTE4MCAyNzMgbC05IC00IE0xODQgMjY2IGwtNyAtNiIgc3Ryb2tlPSIjMUIxNjIyIiBzdHJva2Utd2lkdGg9IjMuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48L3BhdGg+PHBhdGggZD0iTTMxMCAyNzMgbDkgLTQgTTMwNiAyNjYgbDcgLTYiIHN0cm9rZT0iIzFCMTYyMiIgc3Ryb2tlLXdpZHRoPSIzLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+PC9wYXRoPjxwYXRoIGQ9Ik0xODYgMjM4IEMxOTggMjMwIDIxOCAyMzAgMjMwIDIzNiBDMjE4IDIzMyAyMDIgMjM0IDE4OCAyNDIgWiIgZmlsbD0iIzFDMUEyMiI+PC9wYXRoPjxwYXRoIGQ9Ik0yNTAgMjM2IEMyNjIgMjMwIDI4MiAyMzAgMjk0IDIzOCBDMjgwIDIzNCAyNjQgMjMzIDI1MSAyNDIgWiIgZmlsbD0iIzFDMUEyMiI+PC9wYXRoPjxwYXRoIGQ9Ik0yMzYgMjk4IGMtMyA5IC03IDE1IC0xMSAxOCBjNCAzIDkgMyAxMyAxIiBzdHJva2U9IiNBRTc0NEEiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWxsPSJub25lIiBvcGFjaXR5PSIuNzUiPjwvcGF0aD48cGF0aCBkPSJNMjIyIDMzMiBjNiAtNSAxMiAtNCAxOCAtMSBjNiAtMyAxMiAtMyAxNyAxIGMtNSAyIC0xMSAxIC0xNyAxIGMtNiAwIC0xMiAxIC0xOCAtMiB6IiBmaWxsPSIjQjY1QzRFIj48L3BhdGg+PHBhdGggZD0iTTIyMiAzMzIgYzcgNyAyOCA3IDM1IC0xIGMtMiA5IC0xMCAxNSAtMTcgMTUgYy04IDAgLTE1IC01IC0xOCAtMTQgeiIgZmlsbD0iI0NFNzA2MCI+PC9wYXRoPjxlbGxpcHNlIGN4PSIyMzgiIGN5PSIzNDMiIHJ4PSI3IiByeT0iMi42IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIuMyI+PC9lbGxpcHNlPjxwYXRoIGQ9Ik0xNzQgMjUwIEMxNzIgMTk2IDIwMCAxNTggMjQwIDE1OCBDMjgwIDE1OCAzMDggMTk2IDMwNiAyNDggQzI5NiAyMjQgMjc2IDIxMCAyNDYgMjEyIEMyNTIgMTk4IDI1MCAxNzggMjQwIDE2NCBDMjMwIDE3OCAyMjggMTk4IDIzNCAyMTIgQzIwNCAyMTAgMTg0IDIyNCAxNzQgMjUwIFoiIGZpbGw9IiMxQzFBMjIiPjwvcGF0aD48ZyBzdHJva2U9IiMzQTMzNDAiIHN0cm9rZS13aWR0aD0iMy41IiBvcGFjaXR5PSIuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48cGF0aCBkPSJNMTg0IDIxMCBDMTc2IDI1MCAxNzYgMzIwIDE4MiAzODAiPjwvcGF0aD48cGF0aCBkPSJNMjk2IDIxMCBDMzA0IDI1MCAzMDQgMzIwIDI5OCAzODAiPjwvcGF0aD48L2c+PGNpcmNsZSBjeD0iMTY2IiBjeT0iMzAyIiByPSIxMSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRUNDMDRFIiBzdHJva2Utd2lkdGg9IjUiPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjMxNCIgY3k9IjMwMiIgcj0iMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0VDQzA0RSIgc3Ryb2tlLXdpZHRoPSI1Ij48L2NpcmNsZT48L3N2Zz4=" alt="" /><span class="gallery-caption">Portrait</span></div>
+  </div>
+
+  <div class="ba-wrap">
+    <div class="ba-title reveal">
+      <h3>לפני <span class="hl">·</span> אחרי</h3>
+      <p>גררי את הידית כדי לראות את ההבדל</p>
+    </div>
+    <div class="ba-slider reveal" id="baSlider">
+      <div class="ba-side before">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAwIDYyNSIgZmlsbD0ibm9uZSI+PHJlY3Qgd2lkdGg9IjEwMDAiIGhlaWdodD0iNjI1IiBmaWxsPSIjRUZFNkRDIj48L3JlY3Q+PGNpcmNsZSBjeD0iNTAwIiBjeT0iMjg4IiByPSIyNDAiIGZpbGw9IiNFNEQ3QzkiPjwvY2lyY2xlPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI2MiwxMikiPjxwYXRoIGQ9Ik0xNjggMjUyIEMxNjYgMTk0IDE5OCAxNTIgMjQwIDE1MiBDMjgyIDE1MiAzMTQgMTk0IDMxMiAyNTIgQzMxNiAzMDggMzEwIDM1OCAzMDUgNDAyIEMzMDMgMzYwIDMwMCAzMDAgMjk3IDI1OCBDMjk0IDIzMiAyNzIgMjE0IDI0MCAyMTQgQzIwOCAyMTQgMTg2IDIzMiAxODMgMjU4IEMxODAgMzAwIDE3NyAzNTggMTc1IDQwMiBDMTcwIDM1OCAxNjQgMzA4IDE2OCAyNTIgWiIgZmlsbD0iIzQ4MzQyQSI+PC9wYXRoPjxwYXRoIGQ9Ik0xMjAgNjAwIEMxMjQgNTIwIDE2OCA0NzggMjQwIDQ3OCBDMzEyIDQ3OCAzNTYgNTIwIDM2MCA2MDAgWiIgZmlsbD0iI0UzRDNDNiI+PC9wYXRoPjxwYXRoIGQ9Ik0xMjAgNjAwIEMxMjMgNTQ4IDE0NiA1MTIgMTg4IDQ5MiBDMTY2IDUxNCAxNTQgNTUyIDE1NCA2MDAgWiIgZmlsbD0iI0QzQzFCMSI+PC9wYXRoPjxwYXRoIGQ9Ik0yMTQgMzcyIGg1MiB2NDQgYzAgMTggLTExIDMwIC0yNiAzMCBzLTI2IC0xMiAtMjYgLTMwIHoiIGZpbGw9IiNFMEE1N0EiPjwvcGF0aD48cGF0aCBkPSJNMjE0IDM4NiBjMTQgMTIgMzggMTIgNTIgMCB2LTE0IGgtNTIgeiIgZmlsbD0iI0NCOEI1RSI+PC9wYXRoPjxwYXRoIGQ9Ik0yMTQgNDgwIEwyNDAgNTIwIEwyNjYgNDgwIEMyNTAgNDg2IDIzMCA0ODYgMjE0IDQ4MCBaIiBmaWxsPSIjRTBBNTdBIj48L3BhdGg+PHBhdGggZD0iTTE2OCAyNTIgQzE2NiAyMDggMTkyIDE3MiAyNDAgMTcyIEMyODggMTcyIDMxNCAyMDggMzEyIDI1MiBDMzEwIDI5OCAyOTYgMzQwIDI2OCAzNjYgQzI1NyAzNzcgMjUwIDM4MSAyNDAgMzgxIEMyMzAgMzgxIDIyMyAzNzcgMjEyIDM2NiBDMTg0IDM0MCAxNzAgMjk4IDE2OCAyNTIgWiIgZmlsbD0iI0UwQTU3QSI+PC9wYXRoPjxwYXRoIGQ9Ik0xNjYgMjcwIGMtMTIgLTIgLTIwIDggLTE2IDIwIGMzIDEwIDEzIDE2IDIyIDEyIHoiIGZpbGw9IiNFMEE1N0EiPjwvcGF0aD48cGF0aCBkPSJNMzE0IDI3MCBjMTIgLTIgMjAgOCAxNiAyMCBjLTMgMTAgLTEzIDE2IC0yMiAxMiB6IiBmaWxsPSIjRTBBNTdBIj48L3BhdGg+PHBhdGggZD0iTTE4MiAyNzQgQzE5MyAyNTggMjIxIDI1OCAyMzIgMjc0IEMyMjEgMjg4IDE5MyAyODggMTgyIDI3NCBaIiBmaWxsPSIjRkRGREZEIj48L3BhdGg+PHBhdGggZD0iTTI1OCAyNzQgQzI2OSAyNTggMjk3IDI1OCAzMDggMjc0IEMyOTcgMjg4IDI2OSAyODggMjU4IDI3NCBaIiBmaWxsPSIjRkRGREZEIj48L3BhdGg+PGNpcmNsZSBjeD0iMjA3IiBjeT0iMjc0IiByPSIxMy41IiBmaWxsPSIjMzkzMjNGIj48L2NpcmNsZT48Y2lyY2xlIGN4PSIyODMiIGN5PSIyNzQiIHI9IjEzLjUiIGZpbGw9IiMzOTMyM0YiPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjIwNyIgY3k9IjI3NCIgcj0iNiIgZmlsbD0iIzE1MTExQiI+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjgzIiBjeT0iMjc0IiByPSI2IiBmaWxsPSIjMTUxMTFCIj48L2NpcmNsZT48Y2lyY2xlIGN4PSIyMTIiIGN5PSIyNjkiIHI9IjQuNSIgZmlsbD0iI0ZERkRGRCI+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjg4IiBjeT0iMjY5IiByPSI0LjUiIGZpbGw9IiNGREZERkQiPjwvY2lyY2xlPjxwYXRoIGQ9Ik0xODAgMjc0IEMxOTIgMjU0IDIyMiAyNTQgMjM0IDI3MyIgc3Ryb2tlPSIjMUIxNjIyIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSI+PC9wYXRoPjxwYXRoIGQ9Ik0yNTYgMjc0IEMyNjggMjU0IDI5OCAyNTQgMzEwIDI3MyIgc3Ryb2tlPSIjMUIxNjIyIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSI+PC9wYXRoPjxwYXRoIGQ9Ik0xODYgMjM4IEMxOTggMjMwIDIxOCAyMzAgMjMwIDIzNiBDMjE4IDIzMyAyMDIgMjM0IDE4OCAyNDIgWiIgZmlsbD0iIzNBMkExRSI+PC9wYXRoPjxwYXRoIGQ9Ik0yNTAgMjM2IEMyNjIgMjMwIDI4MiAyMzAgMjk0IDIzOCBDMjgwIDIzNCAyNjQgMjMzIDI1MSAyNDIgWiIgZmlsbD0iIzNBMkExRSI+PC9wYXRoPjxwYXRoIGQ9Ik0yMzYgMjk4IGMtMyA5IC03IDE1IC0xMSAxOCBjNCAzIDkgMyAxMyAxIiBzdHJva2U9IiNDQjhCNUUiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWxsPSJub25lIiBvcGFjaXR5PSIuNzUiPjwvcGF0aD48cGF0aCBkPSJNMjIyIDMzMiBjNiAtNSAxMiAtNCAxOCAtMSBjNiAtMyAxMiAtMyAxNyAxIGMtNSAyIC0xMSAxIC0xNyAxIGMtNiAwIC0xMiAxIC0xOCAtMiB6IiBmaWxsPSIjQzk4RTdCIj48L3BhdGg+PHBhdGggZD0iTTIyMiAzMzIgYzcgNyAyOCA3IDM1IC0xIGMtMiA5IC0xMCAxNSAtMTcgMTUgYy04IDAgLTE1IC01IC0xOCAtMTQgeiIgZmlsbD0iI0Q5QTc4RiI+PC9wYXRoPjxwYXRoIGQ9Ik0xNzAgMjUwIEMxNjYgMTk2IDE5NCAxNTQgMjQwIDE1NCBDMzAwIDE1NCAzMzIgMTk0IDMzMiAyNTIgQzMyMiAyMjYgMzAwIDIxMiAyNzQgMjEyIEMyOTAgMjI2IDI5NiAyNDggMjkwIDI2NiBDMjY4IDI0MCAyMzIgMjMyIDIwMCAyNDAgQzE4OCAyNDQgMTc4IDI0OCAxNzAgMjUwIFoiIGZpbGw9IiM0ODM0MkEiPjwvcGF0aD48cGF0aCBkPSJNMTcyIDI1MiBDMTU4IDI5NiAxNTggMzUwIDE2OCAzOTYgQzE2MCAzNTIgMTY4IDMwMCAxODYgMjY0IEMxNzggMjU2IDE3NCAyNTIgMTcyIDI1MiBaIiBmaWxsPSIjNDgzNDJBIj48L3BhdGg+PGcgc3Ryb2tlPSIjNkE0RTM4IiBzdHJva2Utd2lkdGg9IjMuNSIgb3BhY2l0eT0iLjUiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+PHBhdGggZD0iTTE5NiAxNzAgQzE4MCAxOTIgMTcyIDIzMCAxNzYgMjgwIj48L3BhdGg+PHBhdGggZD0iTTMwMCAyNTAgQzMwOCAzMDAgMzA4IDM1NiAzMDAgMzk4Ij48L3BhdGg+PC9nPjxjaXJjbGUgY3g9IjE2NiIgY3k9IjMwMiIgcj0iMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0VDQzA0RSIgc3Ryb2tlLXdpZHRoPSI1Ij48L2NpcmNsZT48Y2lyY2xlIGN4PSIzMTQiIGN5PSIzMDIiIHI9IjExIiBmaWxsPSJub25lIiBzdHJva2U9IiNFQ0MwNEUiIHN0cm9rZS13aWR0aD0iNSI+PC9jaXJjbGU+PC9nPjwvc3ZnPg==" alt="לפני" />
+        <span class="label">לפני</span>
+      </div>
+      <div class="ba-side after" id="baAfter">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAwIDYyNSIgZmlsbD0ibm9uZSI+PHJlY3Qgd2lkdGg9IjEwMDAiIGhlaWdodD0iNjI1IiBmaWxsPSIjRkZDNzNDIj48L3JlY3Q+PGNpcmNsZSBjeD0iNTAwIiBjeT0iMjg4IiByPSIyNDAiIGZpbGw9IiNGRjZGOUMiPjwvY2lyY2xlPjxnIGZpbGw9IiNGRkY2RTYiPjxwYXRoIGQ9Ik03NzggMTUwYzEwLTEgMTYtNyAxNy0xNyAxIDEwIDcgMTYgMTcgMTctMTAgMS0xNiA3LTE3IDE3LTEtMTAtNy0xNi0xNy0xN3oiPjwvcGF0aD48cGF0aCBkPSJNMjE0IDQ3MGM5LTEgMTQtNiAxNS0xNSAxIDkgNiAxNCAxNSAxNS05IDEtMTQgNi0xNSAxNS0xLTktNi0xNC0xNS0xNXoiPjwvcGF0aD48L2c+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjYyLDEyKSI+PHBhdGggZD0iTTE2OCAyNTIgQzE2NiAxOTQgMTk4IDE1MiAyNDAgMTUyIEMyODIgMTUyIDMxNCAxOTQgMzEyIDI1MiBDMzE2IDMwOCAzMTAgMzU4IDMwNSA0MDIgQzMwMyAzNjAgMzAwIDMwMCAyOTcgMjU4IEMyOTQgMjMyIDI3MiAyMTQgMjQwIDIxNCBDMjA4IDIxNCAxODYgMjMyIDE4MyAyNTggQzE4MCAzMDAgMTc3IDM1OCAxNzUgNDAyIEMxNzAgMzU4IDE2NCAzMDggMTY4IDI1MiBaIiBmaWxsPSIjNDgzNDJBIj48L3BhdGg+PHBhdGggZD0iTTEyMCA2MDAgQzEyNCA1MjAgMTY4IDQ3OCAyNDAgNDc4IEMzMTIgNDc4IDM1NiA1MjAgMzYwIDYwMCBaIiBmaWxsPSIjQzlBN0Y1Ij48L3BhdGg+PHBhdGggZD0iTTEyMCA2MDAgQzEyMyA1NDggMTQ2IDUxMiAxODggNDkyIEMxNjYgNTE0IDE1NCA1NTIgMTU0IDYwMCBaIiBmaWxsPSIjQTk4NEU4Ij48L3BhdGg+PHBhdGggZD0iTTIxNCAzNzIgaDUyIHY0NCBjMCAxOCAtMTEgMzAgLTI2IDMwIHMtMjYgLTEyIC0yNiAtMzAgeiIgZmlsbD0iI0UwQTU3QSI+PC9wYXRoPjxwYXRoIGQ9Ik0yMTQgMzg2IGMxNCAxMiAzOCAxMiA1MiAwIHYtMTQgaC01MiB6IiBmaWxsPSIjQ0I4QjVFIj48L3BhdGg+PHBhdGggZD0iTTIxNCA0ODAgTDI0MCA1MjAgTDI2NiA0ODAgQzI1MCA0ODYgMjMwIDQ4NiAyMTQgNDgwIFoiIGZpbGw9IiNFMEE1N0EiPjwvcGF0aD48cGF0aCBkPSJNMTY4IDI1MiBDMTY2IDIwOCAxOTIgMTcyIDI0MCAxNzIgQzI4OCAxNzIgMzE0IDIwOCAzMTIgMjUyIEMzMTAgMjk4IDI5NiAzNDAgMjY4IDM2NiBDMjU3IDM3NyAyNTAgMzgxIDI0MCAzODEgQzIzMCAzODEgMjIzIDM3NyAyMTIgMzY2IEMxODQgMzQwIDE3MCAyOTggMTY4IDI1MiBaIiBmaWxsPSIjRTBBNTdBIj48L3BhdGg+PHBhdGggZD0iTTE2NiAyNzAgYy0xMiAtMiAtMjAgOCAtMTYgMjAgYzMgMTAgMTMgMTYgMjIgMTIgeiIgZmlsbD0iI0UwQTU3QSI+PC9wYXRoPjxwYXRoIGQ9Ik0zMTQgMjcwIGMxMiAtMiAyMCA4IDE2IDIwIGMtMyAxMCAtMTMgMTYgLTIyIDEyIHoiIGZpbGw9IiNFMEE1N0EiPjwvcGF0aD48ZWxsaXBzZSBjeD0iMTk4IiBjeT0iMzAyIiByeD0iMjEiIHJ5PSIxMyIgZmlsbD0iI0U4ODk2QiIgb3BhY2l0eT0iLjUiPjwvZWxsaXBzZT48ZWxsaXBzZSBjeD0iMjgyIiBjeT0iMzAyIiByeD0iMjEiIHJ5PSIxMyIgZmlsbD0iI0U4ODk2QiIgb3BhY2l0eT0iLjUiPjwvZWxsaXBzZT48cGF0aCBkPSJNMTgyIDI2OCBDMTkzIDI1NiAyMjEgMjU2IDIzMiAyNjggQzIyMSAyNzMgMTkzIDI3MyAxODIgMjY4IFoiIGZpbGw9IiNCOThBRTAiIG9wYWNpdHk9Ii41Ij48L3BhdGg+PHBhdGggZD0iTTI1OCAyNjggQzI2OSAyNTYgMjk3IDI1NiAzMDggMjY4IEMyOTcgMjczIDI2OSAyNzMgMjU4IDI2OCBaIiBmaWxsPSIjQjk4QUUwIiBvcGFjaXR5PSIuNSI+PC9wYXRoPjxwYXRoIGQ9Ik0xODIgMjc0IEMxOTMgMjU4IDIyMSAyNTggMjMyIDI3NCBDMjIxIDI4OCAxOTMgMjg4IDE4MiAyNzQgWiIgZmlsbD0iI0ZERkRGRCI+PC9wYXRoPjxwYXRoIGQ9Ik0yNTggMjc0IEMyNjkgMjU4IDI5NyAyNTggMzA4IDI3NCBDMjk3IDI4OCAyNjkgMjg4IDI1OCAyNzQgWiIgZmlsbD0iI0ZERkRGRCI+PC9wYXRoPjxjaXJjbGUgY3g9IjIwNyIgY3k9IjI3NCIgcj0iMTMuNSIgZmlsbD0iIzM5MzIzRiI+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjgzIiBjeT0iMjc0IiByPSIxMy41IiBmaWxsPSIjMzkzMjNGIj48L2NpcmNsZT48Y2lyY2xlIGN4PSIyMDciIGN5PSIyNzQiIHI9IjYiIGZpbGw9IiMxNTExMUIiPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjI4MyIgY3k9IjI3NCIgcj0iNiIgZmlsbD0iIzE1MTExQiI+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjEyIiBjeT0iMjY5IiByPSI0LjUiIGZpbGw9IiNGREZERkQiPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjI4OCIgY3k9IjI2OSIgcj0iNC41IiBmaWxsPSIjRkRGREZEIj48L2NpcmNsZT48cGF0aCBkPSJNMTgwIDI3NCBDMTkyIDI1NCAyMjIgMjU0IDIzNCAyNzMiIHN0cm9rZT0iIzFCMTYyMiIgc3Ryb2tlLXdpZHRoPSI0LjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSI+PC9wYXRoPjxwYXRoIGQ9Ik0yNTYgMjc0IEMyNjggMjU0IDI5OCAyNTQgMzEwIDI3MyIgc3Ryb2tlPSIjMUIxNjIyIiBzdHJva2Utd2lkdGg9IjQuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWxsPSJub25lIj48L3BhdGg+PHBhdGggZD0iTTE4MCAyNzMgbC05IC00IE0xODQgMjY2IGwtNyAtNiIgc3Ryb2tlPSIjMUIxNjIyIiBzdHJva2Utd2lkdGg9IjMuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48L3BhdGg+PHBhdGggZD0iTTMxMCAyNzMgbDkgLTQgTTMwNiAyNjYgbDcgLTYiIHN0cm9rZT0iIzFCMTYyMiIgc3Ryb2tlLXdpZHRoPSIzLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+PC9wYXRoPjxwYXRoIGQ9Ik0xODYgMjM4IEMxOTggMjMwIDIxOCAyMzAgMjMwIDIzNiBDMjE4IDIzMyAyMDIgMjM0IDE4OCAyNDIgWiIgZmlsbD0iIzNBMkExRSI+PC9wYXRoPjxwYXRoIGQ9Ik0yNTAgMjM2IEMyNjIgMjMwIDI4MiAyMzAgMjk0IDIzOCBDMjgwIDIzNCAyNjQgMjMzIDI1MSAyNDIgWiIgZmlsbD0iIzNBMkExRSI+PC9wYXRoPjxwYXRoIGQ9Ik0yMzYgMjk4IGMtMyA5IC03IDE1IC0xMSAxOCBjNCAzIDkgMyAxMyAxIiBzdHJva2U9IiNDQjhCNUUiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWxsPSJub25lIiBvcGFjaXR5PSIuNzUiPjwvcGF0aD48cGF0aCBkPSJNMjIyIDMzMiBjNiAtNSAxMiAtNCAxOCAtMSBjNiAtMyAxMiAtMyAxNyAxIGMtNSAyIC0xMSAxIC0xNyAxIGMtNiAwIC0xMiAxIC0xOCAtMiB6IiBmaWxsPSIjQjA0NzNCIj48L3BhdGg+PHBhdGggZD0iTTIyMiAzMzIgYzcgNyAyOCA3IDM1IC0xIGMtMiA5IC0xMCAxNSAtMTcgMTUgYy04IDAgLTE1IC01IC0xOCAtMTQgeiIgZmlsbD0iI0QxNEU1QyI+PC9wYXRoPjxlbGxpcHNlIGN4PSIyMzgiIGN5PSIzNDMiIHJ4PSI3IiByeT0iMi42IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIuMyI+PC9lbGxpcHNlPjxwYXRoIGQ9Ik0xNzAgMjUwIEMxNjYgMTk2IDE5NCAxNTQgMjQwIDE1NCBDMzAwIDE1NCAzMzIgMTk0IDMzMiAyNTIgQzMyMiAyMjYgMzAwIDIxMiAyNzQgMjEyIEMyOTAgMjI2IDI5NiAyNDggMjkwIDI2NiBDMjY4IDI0MCAyMzIgMjMyIDIwMCAyNDAgQzE4OCAyNDQgMTc4IDI0OCAxNzAgMjUwIFoiIGZpbGw9IiM0ODM0MkEiPjwvcGF0aD48cGF0aCBkPSJNMTcyIDI1MiBDMTU4IDI5NiAxNTggMzUwIDE2OCAzOTYgQzE2MCAzNTIgMTY4IDMwMCAxODYgMjY0IEMxNzggMjU2IDE3NCAyNTIgMTcyIDI1MiBaIiBmaWxsPSIjNDgzNDJBIj48L3BhdGg+PGcgc3Ryb2tlPSIjNkE0RTM4IiBzdHJva2Utd2lkdGg9IjMuNSIgb3BhY2l0eT0iLjUiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+PHBhdGggZD0iTTE5NiAxNzAgQzE4MCAxOTIgMTcyIDIzMCAxNzYgMjgwIj48L3BhdGg+PHBhdGggZD0iTTMwMCAyNTAgQzMwOCAzMDAgMzA4IDM1NiAzMDAgMzk4Ij48L3BhdGg+PC9nPjxjaXJjbGUgY3g9IjE2NiIgY3k9IjMwMiIgcj0iMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0VDQzA0RSIgc3Ryb2tlLXdpZHRoPSI1Ij48L2NpcmNsZT48Y2lyY2xlIGN4PSIzMTQiIGN5PSIzMDIiIHI9IjExIiBmaWxsPSJub25lIiBzdHJva2U9IiNFQ0MwNEUiIHN0cm9rZS13aWR0aD0iNSI+PC9jaXJjbGU+PC9nPjwvc3ZnPg==" alt="אחרי" />
+        <span class="label">אחרי</span>
+      </div>
+      <div class="ba-handle" id="baHandle"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section id="testimonials" class="testimonials">
+  <div class="section-header reveal">
+    <div class="section-head-left">
+      <div class="section-num">06</div>
+      <h2 class="section-title">מה <span class="hl">אומרות</span></h2>
+    </div>
+    <div class="section-meta">/ המלצות</div>
+  </div>
+  <div class="testi-grid">
+    <div class="testi reveal">
+      <div class="stars">★★★★★</div>
+      <blockquote>תהל יודעת איך לדבר עם ילדות בגיל הזה. הבת שלי <span class="hl">יצאה עם המון ביטחון</span>.</blockquote>
+      <div class="author"><div class="avatar">מ</div><div><div class="name">מיכל ל.</div><div class="role">אמא של נועה, גיל 13</div></div></div>
+    </div>
+    <div class="testi reveal">
+      <div class="stars">★★★★★</div>
+      <blockquote>הקורס <span class="hl">הכי כיפי</span> שהייתי בו. למדתי כל כך הרבה ויש לי עכשיו ערכה משלי.</blockquote>
+      <div class="author"><div class="avatar">ש</div><div><div class="name">שירה ב.</div><div class="role">משתתפת, גיל 14</div></div></div>
+    </div>
+    <div class="testi reveal">
+      <div class="stars">★★★★★</div>
+      <blockquote>קבוצה קטנה זה אדיר. כל בת מקבלת <span class="hl">תשומת לב אישית</span>.</blockquote>
+      <div class="author"><div class="avatar">ע</div><div><div class="name">ענת ק.</div><div class="role">אמא של עדן, גיל 12</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-header reveal">
+    <div class="section-head-left">
+      <div class="section-num">07</div>
+      <h2 class="section-title">שאלות <span class="hl">נפוצות</span></h2>
+    </div>
+    <div class="section-meta">/ שאלות</div>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item reveal">
+      <div class="faq-q"><span>האם צריך להביא איפור משלי?</span><span class="plus">+</span></div>
+      <div class="faq-a">לא! במהלך הקורס אנחנו עובדות עם המוצרים שלי. בסיום כל בת מקבלת ערכת איפור משלה (קונסילר, סומק ושפתון) — לקחת הביתה ולהמשיך לתרגל.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q"><span>מה אם בתי ביישנית?</span><span class="plus">+</span></div>
+      <div class="faq-a">הקבוצות קטנות במיוחד (עד 5 בנות) בדיוק בשביל זה. האווירה תומכת, חברית, וכל בת מתקדמת בקצב שלה. רוב הנערות מגלות שהקורס הוא דווקא המקום שבו הן נפתחות.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q"><span>מה גודל הקבוצה ולמי הקורס מתאים?</span><span class="plus">+</span></div>
+      <div class="faq-a">קבוצות אינטימיות של עד 5 נערות בלבד, בגילאי 12-16. הקורס מתאים גם למתחילות לחלוטין וגם למי שכבר משחקת קצת עם איפור ורוצה לעשות את זה נכון.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q"><span>איפה מתקיימות הסדנאות?</span><span class="plus">+</span></div>
+      <div class="faq-a">בסטודיו בישעיהו משורר 18, פתח תקווה. חניה זמינה ברחוב.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q"><span>מתי הקורס הבא נפתח?</span><span class="plus">+</span></div>
+      <div class="faq-a">קבוצה חדשה נפתחת — מספר המקומות מוגבל מאוד. השאירי פרטים בטופס למטה ונחזור אלייך עם תאריכים מדויקים תוך 24 שעות.</div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact">
+  <div class="section-header reveal">
+    <div class="section-head-left">
+      <div class="section-num">08</div>
+      <h2 class="section-title">כאן <span class="hl">נפגשות</span></h2>
+    </div>
+    <div class="section-meta">/ הרשמה</div>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info reveal">
+      <h3>שמרי <span class="hl">מקום</span>. הקבוצה מתמלאת מהר.</h3>
+      <p>השאירי פרטים ונחזור אלייך תוך 24 שעות עם תאריכים מדויקים, פרטים נוספים וכל מה שצריך כדי להבטיח את המקום.</p>
+      <div class="contact-row">
+        <div class="icon">☎</div>
+        <div><div class="label">טלפון ישיר</div><div class="value"><a href="tel:0523753300">052-375-3300</a></div></div>
+      </div>
+      <div class="contact-row">
+        <div class="icon">✦</div>
+        <div><div class="label">סטודיו</div><div class="value">ישעיהו משורר 18, פתח תקווה</div></div>
+      </div>
+      <div class="contact-row">
+        <div class="icon">@</div>
+        <div><div class="label">אינסטגרם</div><div class="value">@tahel.makeup</div></div>
+      </div>
+    </div>
+    <form class="cta-form reveal" id="contactForm">
+      <div class="field"><label>שם הנערה</label><input type="text" name="name" placeholder="לדוגמה: נועה" required /></div>
+      <div class="field"><label>שם הורה</label><input type="text" name="parent" placeholder="שם של ההורה" /></div>
+      <div class="field"><label>טלפון</label><input type="tel" name="phone" placeholder="050-0000000" required /></div>
+      <div class="field"><label>גיל</label><select name="age"><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option></select></div>
+      <div class="field"><label>הודעה (אופציונלי)</label><textarea name="msg" placeholder="משהו שכדאי שנדע מראש?"></textarea></div>
+      <button type="submit" class="submit-btn">שלחי לי פרטים →</button>
+    </form>
+  </div>
+</section>
+
+<!-- Closing -->
+<div class="closing">
+  <span class="small">איפור · ביטחון · שפה משלך</span>
+  <div class="text">תהל <b>♥</b></div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo">
+        <span class="logo-mark"><svg viewBox="0 0 48 44" width="26" height="24" fill="none" aria-hidden="true"><g stroke="#FFF1EA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 26q18-20 36 0"/><path d="M10 27q14 11 28 0"/><path d="M42 26q4-2 6-7"/><path d="M15 13l-3-7M24 10v-7M33 13l3-7"/></g><circle cx="24" cy="22" r="5.5" fill="#FFF1EA"/></svg></span>
+        <span class="logo-text" style="color:var(--cream)">תהל<small style="color:var(--butter)">Makeup Studio</small></span>
+      </div>
+      <p>סדנאות איפור לנערות 12-16. סטודיו אינטימי בפתח תקווה. ארבעה מפגשים, חמש בנות בלבד, בסיס לכל החיים.</p>
+    </div>
+    <div class="footer-col">
+      <h4>ניווט</h4>
+      <a href="#about">אודות</a><a href="#course">הקורס</a><a href="#curriculum">תוכנית</a><a href="#gallery">גלריה</a>
+    </div>
+    <div class="footer-col">
+      <h4>צרי קשר</h4>
+      <a href="tel:0523753300">052-375-3300</a><a href="#">@tahel.makeup</a><a href="#contact">טופס הרשמה</a>
+    </div>
+    <div class="footer-col">
+      <h4>סטודיו</h4>
+      <a href="#">ישעיהו משורר 18</a><a href="#">פתח תקווה</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 תהל · MAKEUP STUDIO</span>
+    <span>נבנה באהבה לאמניות צעירות ♥</span>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('click', () => item.classList.toggle('open'));
+  });
+
+  const slider = document.getElementById('baSlider');
+  const after = document.getElementById('baAfter');
+  const handle = document.getElementById('baHandle');
+  let dragging = false;
+  function setSlider(x) {
+    const r = slider.getBoundingClientRect();
+    let p = ((x - r.left) / r.width) * 100;
+    p = Math.max(0, Math.min(100, p));
+    after.style.clipPath = `inset(0 0 0 ${p}%)`;
+    handle.style.left = p + '%';
+  }
+  slider.addEventListener('mousedown', e => { dragging = true; setSlider(e.clientX); });
+  window.addEventListener('mousemove', e => { if (dragging) setSlider(e.clientX); });
+  window.addEventListener('mouseup', () => dragging = false);
+  slider.addEventListener('touchstart', e => { dragging = true; setSlider(e.touches[0].clientX); }, {passive:true});
+  slider.addEventListener('touchmove', e => { if (dragging) setSlider(e.touches[0].clientX); }, {passive:true});
+  slider.addEventListener('touchend', () => dragging = false);
+
+  // Tahel's WhatsApp number (Israeli 052-375-3300 → international format)
+  const TAHEL_WHATSAPP = '972523753300';
+  document.getElementById('contactForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const f = e.target;
+    const name = (f.name.value || '').trim();
+    const parent = (f.parent.value || '').trim();
+    const phone = (f.phone.value || '').trim();
+    const age = f.age.value;
+    const msg = (f.msg.value || '').trim();
+
+    const lines = [
+      'היי תהל! אשמח לפרטים על קורס האיפור ✨',
+      '',
+      'שם הנערה: ' + (name || '—'),
+      parent ? 'שם הורה: ' + parent : null,
+      'טלפון: ' + (phone || '—'),
+      'גיל: ' + age,
+      msg ? 'הודעה: ' + msg : null
+    ].filter(Boolean);
+
+    const url = 'https://wa.me/' + TAHEL_WHATSAPP + '?text=' + encodeURIComponent(lines.join('\n'));
+    window.open(url, '_blank');
+
+    const btn = f.querySelector('.submit-btn');
+    btn.innerHTML = '✓ נפתח וואטסאפ — שלחי לנו!';
+    setTimeout(() => { btn.innerHTML = 'שלחי לי פרטים בוואטסאפ →'; f.reset(); }, 4000);
+  });
+</script>
+
+</body>
+</html>
